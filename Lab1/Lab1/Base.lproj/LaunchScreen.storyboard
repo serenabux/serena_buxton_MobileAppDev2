@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel" translatesAutoresizingMaskIntoConstraints="NO" id="Td3-lP-Vxk">
-                                <rect key="frame" x="212" y="458" width="600" height="450"/>
+                                <rect key="frame" x="324.5" y="542.5" width="375" height="281"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="600" id="1Ji-vZ-LHC"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="375" id="1Ji-vZ-LHC"/>
                                     <constraint firstAttribute="width" secondItem="Td3-lP-Vxk" secondAttribute="height" multiplier="4:3" id="2Kp-OV-Xaf"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="450" id="Sjh-5U-fyc"/>
                                 </constraints>
