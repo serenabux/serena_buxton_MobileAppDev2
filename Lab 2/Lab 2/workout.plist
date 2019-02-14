@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>type</key>
+		<string>abs</string>
+		<key>workouts</key>
+		<array>
+			<string>plank</string>
+			<string>crunches</string>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>arms</string>
+		<key>workouts</key>
+		<array>
+			<string>push ups</string>
+			<string>bicep curls</string>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>legs</string>
+		<key>workouts</key>
+		<array>
+			<string>lunges</string>
+			<string>squats</string>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>cardio</string>
+		<key>workouts</key>
+		<array>
+			<string>running</string>
+			<string>cycling</string>
+		</array>
+	</dict>
+	<dict>
+		<key>type</key>
+		<string>flexibility</string>
+		<key>workouts</key>
+		<array>
+			<string>standing hamstring strech</string>
+			<string>figure four strech</string>
+		</array>
+	</dict>
+</array>
+</plist>
