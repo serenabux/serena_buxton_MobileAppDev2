@@ -18,7 +18,19 @@ class ViewController: UITableViewController {
         typeData.loadData()
         typeList = typeData.getType()
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        //application instance
+        let app = UIApplication.shared
+        //subscribe to the UIApplicationWillResignActiveNotification notification
+
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    //called when the UIApplicationWillResignActiveNotification notification is posted
+    //all notification methods take a single NSNotification instance of their argument
+    @objc func applicationWillResignActive(_ notification: NSNotification){
+        typeData.writeData()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
