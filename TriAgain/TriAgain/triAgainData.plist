@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>solution</key>
+			<string>first wives</string>
+			<key>question</key>
+			<array>
+				<string>Dolly</string>
+				<string>Jackie</string>
+				<string>Eleanor</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>flightless birds</string>
+			<key>question</key>
+			<array>
+				<string>penguin</string>
+				<string>kiwi</string>
+				<string>ostrich</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>broken bone</string>
+			<key>question</key>
+			<array>
+				<string>Spiral</string>
+				<string>Compound</string>
+				<string>Greenstick</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>australian cities</string>
+			<key>question</key>
+			<array>
+				<string>Brisbane</string>
+				<string>Darwin</string>
+				<string>Hobart</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>solution</key>
+			<string>friends</string>
+			<key>question</key>
+			<array>
+				<string>Rachel</string>
+				<string>Joey</string>
+				<string>Monica</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>SNL</string>
+			<key>question</key>
+			<array>
+				<string>Dan Aykroyd</string>
+				<string>Tina Fey</string>
+				<string>Will Ferrell</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>best picture</string>
+			<key>question</key>
+			<array>
+				<string>Gigi</string>
+				<string>Annie Hall</string>
+				<string>Spotlight</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Donald&apos;s nephew</string>
+			<key>question</key>
+			<array>
+				<string>Huey</string>
+				<string>Dewey</string>
+				<string>Louie</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>solution</key>
+			<string>tennis</string>
+			<key>question</key>
+			<array>
+				<string>net</string>
+				<string>love</string>
+				<string>Williams</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>gymnastics</string>
+			<key>question</key>
+			<array>
+				<string>Vault</string>
+				<string>Bars</string>
+				<string>Beam</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>triathlon</string>
+			<key>question</key>
+			<array>
+				<string>Swimming</string>
+				<string>Cycling</string>
+				<string>Running</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>winter olympics</string>
+			<key>question</key>
+			<array>
+				<string>Vancouver</string>
+				<string>Sochi</string>
+				<string>Salt Lake City</string>
+			</array>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>solution</key>
+			<string>reflect</string>
+			<key>question</key>
+			<array>
+				<string>Satellite</string>
+				<string>Mirror</string>
+				<string>Reminiscent Person</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>filled</string>
+			<key>question</key>
+			<array>
+				<string>A cavity</string>
+				<string>A doughnut</string>
+				<string>A prescription</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>bags</string>
+			<key>question</key>
+			<array>
+				<string>Tea</string>
+				<string>Doggy</string>
+				<string>Duffel</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>trunk</string>
+			<key>question</key>
+			<array>
+				<string>A car</string>
+				<string> A tree</string>
+				<string>An elephant</string>
+			</array>
+		</dict>
+	</array>
+</array>
+</plist>
