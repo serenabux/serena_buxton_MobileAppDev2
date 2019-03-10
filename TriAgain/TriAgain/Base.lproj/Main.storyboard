@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,59 +15,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TriAgain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Agh-na-qdw">
-                                <rect key="frame" x="15" y="13.5" width="290" height="473"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syp-NI-YBb">
-                                        <rect key="frame" x="21.5" y="0.0" width="247.5" height="52.5"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="45"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sports" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-2q-k4g">
-                                        <rect key="frame" x="25" y="72.5" width="240" height="239"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="1309" id="MX8-Lj-xnc"/>
-                                            <constraint firstAttribute="width" secondItem="ocK-2q-k4g" secondAttribute="height" multiplier="1309:1306" id="Ueq-yl-osC"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1306" id="jXy-F6-XK2"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports/Recreation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-6A-rFp">
-                                        <rect key="frame" x="13" y="331.5" width="264.5" height="35"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="37"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-hF-hTk">
-                                        <rect key="frame" x="119" y="386.5" width="52" height="41"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
-                                        <state key="normal" title="Play"/>
-                                        <connections>
-                                            <segue destination="g3t-CY-wD0" kind="presentation" identifier="questionSegue" id="WwD-CW-DBt"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-Hg-8Ad">
-                                        <rect key="frame" x="99" y="447.5" width="92" height="25.5"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
-                                        <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ocK-2q-k4g" firstAttribute="width" secondItem="Agh-na-qdw" secondAttribute="width" constant="-50" id="Ibw-uj-7eu"/>
-                                </constraints>
-                            </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5m3-JM-Hop">
-                                <rect key="frame" x="0.0" y="-88" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                 <color key="backgroundColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="AxE-Zb-Wom"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="AxE-Zb-Wom"/>
+                                    <constraint firstAttribute="height" constant="60" id="cDk-Tt-HgL"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2pI-sy-B6G"/>
@@ -78,18 +34,400 @@
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cDk-Tt-HgL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="AxE-Zb-Wom"/>
+                                        <include reference="cDk-Tt-HgL"/>
+                                    </mask>
+                                </variation>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syp-NI-YBb">
+                                <rect key="frame" x="124.66666666666669" y="75" width="165" height="35"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6C-dS-uhe">
+                                <rect key="frame" x="353" y="247" width="92" height="25.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports/Recreation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-6A-rFp">
+                                <rect key="frame" x="90" y="351" width="256" height="34"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="29"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-hF-hTk">
+                                <rect key="frame" x="187" y="400" width="40" height="34"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <state key="normal" title="Play"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="38"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="g3t-CY-wD0" kind="presentation" identifier="questionSegue" id="WwD-CW-DBt"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sports" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-2q-k4g">
+                                <rect key="frame" x="91.666666666666686" y="118" width="225" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="225" id="LbJ-sF-qk4"/>
+                                    <constraint firstAttribute="width" constant="400" id="MX8-Lj-xnc"/>
+                                    <constraint firstAttribute="width" secondItem="ocK-2q-k4g" secondAttribute="height" multiplier="1:1" id="Ueq-yl-osC"/>
+                                    <constraint firstAttribute="height" constant="200" id="ZTU-eX-62L"/>
+                                    <constraint firstAttribute="height" constant="300" id="Zmq-54-RnI"/>
+                                    <constraint firstAttribute="width" constant="300" id="fgf-b0-tZe"/>
+                                    <constraint firstAttribute="width" constant="400" id="isB-gi-wvv"/>
+                                    <constraint firstAttribute="height" constant="400" id="jXy-F6-XK2"/>
+                                    <constraint firstAttribute="height" constant="400" id="kiV-B6-ytI"/>
+                                    <constraint firstAttribute="height" constant="225" id="qWd-lq-pTY"/>
+                                    <constraint firstAttribute="width" constant="200" id="yXL-GD-bhw"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LbJ-sF-qk4"/>
+                                        <exclude reference="MX8-Lj-xnc"/>
+                                        <exclude reference="ZTU-eX-62L"/>
+                                        <exclude reference="Zmq-54-RnI"/>
+                                        <exclude reference="fgf-b0-tZe"/>
+                                        <exclude reference="isB-gi-wvv"/>
+                                        <exclude reference="jXy-F6-XK2"/>
+                                        <exclude reference="kiV-B6-ytI"/>
+                                        <exclude reference="qWd-lq-pTY"/>
+                                        <exclude reference="yXL-GD-bhw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZTU-eX-62L"/>
+                                        <include reference="yXL-GD-bhw"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="Ueq-yl-osC"/>
+                                        <include reference="Zmq-54-RnI"/>
+                                        <include reference="fgf-b0-tZe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="LbJ-sF-qk4"/>
+                                        <include reference="qWd-lq-pTY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="isB-gi-wvv"/>
+                                        <include reference="kiV-B6-ytI"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-Hg-8Ad">
+                                <rect key="frame" x="171.66666666666666" y="442" width="71" height="20"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="34"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Agh-na-qdw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-30" id="1mb-hL-41I"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="Syp-NI-YBb" secondAttribute="bottom" constant="25.5" id="04Z-pq-grV"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="top" secondItem="Syp-NI-YBb" secondAttribute="bottom" constant="15" id="09J-VX-fuG">
+                                <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1un-l6-y2J">
+                                <variation key="heightClass=regular-widthClass=compact" constant="11"/>
+                            </constraint>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="top" secondItem="2Zm-6A-rFp" secondAttribute="bottom" constant="30" id="28H-0g-s7u"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="ocK-2q-k4g" secondAttribute="bottom" constant="15" id="2AJ-63-1SW"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="top" secondItem="2Zm-6A-rFp" secondAttribute="bottom" constant="25" id="3ht-ZT-yKf"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4B8-d2-m6e">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-3"/>
+                            </constraint>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5AE-31-SoU"/>
                             <constraint firstItem="5m3-JM-Hop" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5QL-Vq-yeg"/>
-                            <constraint firstItem="5m3-JM-Hop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DuT-RM-Skt"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="5bd-bc-tMK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Zm-6A-rFp" secondAttribute="trailing" id="6fs-Yf-Es2"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="84w-gX-B7Y"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8lg-uf-dqP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szp-Hg-8Ad" secondAttribute="trailing" id="AZ0-Tb-kGB"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="BrX-ob-LUn"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="ocK-2q-k4g" secondAttribute="bottom" constant="8" id="Ckc-az-ZV6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Syp-NI-YBb" secondAttribute="trailing" id="CyI-v3-Ldi"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dlz-MG-T8R"/>
+                            <constraint firstItem="5m3-JM-Hop" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DuT-RM-Skt">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="Dwe-N5-heS"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="ET6-oB-JSr"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="EXl-yO-fK1"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="170" id="FrZ-Gb-Lef"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="Syp-NI-YBb" secondAttribute="bottom" constant="15" id="HCf-Rw-t0M"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HsI-46-J6S"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ION-7h-eYq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Syp-NI-YBb" secondAttribute="trailing" constant="20" id="ISl-La-SZ2"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Iy0-ka-fkq"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="top" secondItem="Syp-NI-YBb" secondAttribute="bottom" constant="30" id="J3j-5x-I7V"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JP6-5d-Im0"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KYD-cc-PVC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mka-hF-hTk" secondAttribute="trailing" id="LJz-CX-gU3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Syp-NI-YBb" secondAttribute="trailing" id="N3a-aH-4sG"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="ocK-2q-k4g" secondAttribute="bottom" constant="8" id="N7a-QQ-ko5"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="NYO-dR-MaH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Zm-6A-rFp" secondAttribute="trailing" constant="20" id="O0X-pt-FPp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szp-Hg-8Ad" secondAttribute="trailing" constant="20" id="OuX-Dx-rnv"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PHs-rw-dki"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="PJj-tE-PtS"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-60" id="QQt-hD-wVS"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RGc-Ed-2fc"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-300" id="Rdg-ed-PSz"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="21" id="Ryj-Xk-5bk"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TVb-Fm-5eE"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" constant="8" symbolic="YES" id="UwS-5x-U2C"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" constant="8" symbolic="YES" id="Vf6-Om-oyF"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="top" secondItem="2Zm-6A-rFp" secondAttribute="bottom" constant="15" id="WHV-Ql-x0c"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="30" id="WjW-EE-JPh"/>
                             <constraint firstItem="5m3-JM-Hop" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xax-bK-Qlc"/>
-                            <constraint firstItem="Agh-na-qdw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZI6-BY-R8a"/>
-                            <constraint firstItem="Agh-na-qdw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ucf-Z6-Z1A"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YA6-UL-Nsu"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="Yi4-xp-wCq"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="top" secondItem="2Zm-6A-rFp" secondAttribute="bottom" constant="20" id="b3O-58-4H6"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="ocK-2q-k4g" secondAttribute="bottom" constant="20" id="bbv-M0-kbd"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c2L-Za-JPb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Zm-6A-rFp" secondAttribute="trailing" id="c7W-Dm-4J8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="45" id="cTl-9M-ElT"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" constant="8" symbolic="YES" id="dUf-jT-E64"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="14" id="el2-JE-tAK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mka-hF-hTk" secondAttribute="trailing" id="fQn-2e-mPe"/>
+                            <constraint firstItem="mka-hF-hTk" firstAttribute="top" secondItem="2Zm-6A-rFp" secondAttribute="bottom" constant="15" id="fo4-1Z-ZiP"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="15" id="jR0-ln-lx0"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="Syp-NI-YBb" secondAttribute="bottom" constant="15" id="kJ0-2H-HBF"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="20" id="kbv-59-rTM"/>
+                            <constraint firstItem="2Zm-6A-rFp" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="q9A-NK-xSK"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="90" id="qKz-5W-ihp"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="qNv-dA-4u2"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="rFZ-9r-TPF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szp-Hg-8Ad" secondAttribute="trailing" id="tIY-Xl-xf0"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="50" id="u3V-6u-WaP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szp-Hg-8Ad" secondAttribute="trailing" constant="81" id="uGN-fi-SRh"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="50" id="ua1-8d-G5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mka-hF-hTk" secondAttribute="trailing" constant="20" id="vWA-FQ-sZw"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="8" id="wga-XJ-1ct"/>
+                            <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="xHF-lU-egk"/>
+                            <constraint firstItem="Szp-Hg-8Ad" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="y4k-OE-vXc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="q6C-dS-uhe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6fs-Yf-Es2"/>
+                                <exclude reference="AZ0-Tb-kGB"/>
+                                <exclude reference="CyI-v3-Ldi"/>
+                                <exclude reference="ISl-La-SZ2"/>
+                                <exclude reference="LJz-CX-gU3"/>
+                                <exclude reference="N3a-aH-4sG"/>
+                                <exclude reference="O0X-pt-FPp"/>
+                                <exclude reference="OuX-Dx-rnv"/>
+                                <exclude reference="c7W-Dm-4J8"/>
+                                <exclude reference="cTl-9M-ElT"/>
+                                <exclude reference="fQn-2e-mPe"/>
+                                <exclude reference="tIY-Xl-xf0"/>
+                                <exclude reference="uGN-fi-SRh"/>
+                                <exclude reference="vWA-FQ-sZw"/>
+                                <exclude reference="5AE-31-SoU"/>
+                                <exclude reference="8lg-uf-dqP"/>
+                                <exclude reference="BrX-ob-LUn"/>
+                                <exclude reference="Dlz-MG-T8R"/>
+                                <exclude reference="ET6-oB-JSr"/>
+                                <exclude reference="J3j-5x-I7V"/>
+                                <exclude reference="PJj-tE-PtS"/>
+                                <exclude reference="QQt-hD-wVS"/>
+                                <exclude reference="Rdg-ed-PSz"/>
+                                <exclude reference="TVb-Fm-5eE"/>
+                                <exclude reference="xHF-lU-egk"/>
+                                <exclude reference="5bd-bc-tMK"/>
+                                <exclude reference="FrZ-Gb-Lef"/>
+                                <exclude reference="JP6-5d-Im0"/>
+                                <exclude reference="UwS-5x-U2C"/>
+                                <exclude reference="Yi4-xp-wCq"/>
+                                <exclude reference="c2L-Za-JPb"/>
+                                <exclude reference="jR0-ln-lx0"/>
+                                <exclude reference="qKz-5W-ihp"/>
+                                <exclude reference="u3V-6u-WaP"/>
+                                <exclude reference="ua1-8d-G5a"/>
+                                <exclude reference="04Z-pq-grV"/>
+                                <exclude reference="Ckc-az-ZV6"/>
+                                <exclude reference="EXl-yO-fK1"/>
+                                <exclude reference="HCf-Rw-t0M"/>
+                                <exclude reference="N7a-QQ-ko5"/>
+                                <exclude reference="RGc-Ed-2fc"/>
+                                <exclude reference="Vf6-Om-oyF"/>
+                                <exclude reference="YA6-UL-Nsu"/>
+                                <exclude reference="bbv-M0-kbd"/>
+                                <exclude reference="kJ0-2H-HBF"/>
+                                <exclude reference="q9A-NK-xSK"/>
+                                <exclude reference="28H-0g-s7u"/>
+                                <exclude reference="3ht-ZT-yKf"/>
+                                <exclude reference="Dwe-N5-heS"/>
+                                <exclude reference="HsI-46-J6S"/>
+                                <exclude reference="NYO-dR-MaH"/>
+                                <exclude reference="WHV-Ql-x0c"/>
+                                <exclude reference="b3O-58-4H6"/>
+                                <exclude reference="dUf-jT-E64"/>
+                                <exclude reference="fo4-1Z-ZiP"/>
+                                <exclude reference="84w-gX-B7Y"/>
+                                <exclude reference="PHs-rw-dki"/>
+                                <exclude reference="Ryj-Xk-5bk"/>
+                                <exclude reference="WjW-EE-JPh"/>
+                                <exclude reference="el2-JE-tAK"/>
+                                <exclude reference="kbv-59-rTM"/>
+                                <exclude reference="qNv-dA-4u2"/>
+                                <exclude reference="rFZ-9r-TPF"/>
+                                <exclude reference="wga-XJ-1ct"/>
+                                <exclude reference="y4k-OE-vXc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="q6C-dS-uhe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ISl-La-SZ2"/>
+                                <include reference="O0X-pt-FPp"/>
+                                <include reference="OuX-Dx-rnv"/>
+                                <exclude reference="uGN-fi-SRh"/>
+                                <include reference="vWA-FQ-sZw"/>
+                                <exclude reference="09J-VX-fuG"/>
+                                <exclude reference="4B8-d2-m6e"/>
+                                <include reference="BrX-ob-LUn"/>
+                                <include reference="TVb-Fm-5eE"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <include reference="UwS-5x-U2C"/>
+                                <include reference="qKz-5W-ihp"/>
+                                <exclude reference="1un-l6-y2J"/>
+                                <exclude reference="2AJ-63-1SW"/>
+                                <include reference="Vf6-Om-oyF"/>
+                                <include reference="kJ0-2H-HBF"/>
+                                <include reference="3ht-ZT-yKf"/>
+                                <exclude reference="ION-7h-eYq"/>
+                                <exclude reference="WHV-Ql-x0c"/>
+                                <include reference="dUf-jT-E64"/>
+                                <exclude reference="Iy0-ka-fkq"/>
+                                <include reference="Ryj-Xk-5bk"/>
+                                <exclude reference="WjW-EE-JPh"/>
+                                <include reference="y4k-OE-vXc"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="AZ0-Tb-kGB"/>
+                                <include reference="LJz-CX-gU3"/>
+                                <include reference="N3a-aH-4sG"/>
+                                <include reference="c7W-Dm-4J8"/>
+                                <exclude reference="09J-VX-fuG"/>
+                                <exclude reference="4B8-d2-m6e"/>
+                                <include reference="5AE-31-SoU"/>
+                                <include reference="8lg-uf-dqP"/>
+                                <exclude reference="PJj-tE-PtS"/>
+                                <include reference="5bd-bc-tMK"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <include reference="ua1-8d-G5a"/>
+                                <exclude reference="1un-l6-y2J"/>
+                                <exclude reference="2AJ-63-1SW"/>
+                                <include reference="HCf-Rw-t0M"/>
+                                <include reference="q9A-NK-xSK"/>
+                                <include reference="Dwe-N5-heS"/>
+                                <exclude reference="ION-7h-eYq"/>
+                                <include reference="WHV-Ql-x0c"/>
+                                <exclude reference="Iy0-ka-fkq"/>
+                                <include reference="el2-JE-tAK"/>
+                                <include reference="qNv-dA-4u2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="cTl-9M-ElT"/>
+                                <exclude reference="ET6-oB-JSr"/>
+                                <include reference="jR0-ln-lx0"/>
+                                <exclude reference="2AJ-63-1SW"/>
+                                <include reference="Ckc-az-ZV6"/>
+                                <include reference="N7a-QQ-ko5"/>
+                                <include reference="fo4-1Z-ZiP"/>
+                                <exclude reference="WjW-EE-JPh"/>
+                                <include reference="wga-XJ-1ct"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="6fs-Yf-Es2"/>
+                                <exclude reference="CyI-v3-Ldi"/>
+                                <include reference="fQn-2e-mPe"/>
+                                <include reference="tIY-Xl-xf0"/>
+                                <exclude reference="09J-VX-fuG"/>
+                                <exclude reference="4B8-d2-m6e"/>
+                                <include reference="Dlz-MG-T8R"/>
+                                <include reference="J3j-5x-I7V"/>
+                                <include reference="QQt-hD-wVS"/>
+                                <exclude reference="xHF-lU-egk"/>
+                                <exclude reference="FrZ-Gb-Lef"/>
+                                <include reference="JP6-5d-Im0"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <exclude reference="Yi4-xp-wCq"/>
+                                <include reference="c2L-Za-JPb"/>
+                                <exclude reference="u3V-6u-WaP"/>
+                                <exclude reference="04Z-pq-grV"/>
+                                <exclude reference="1un-l6-y2J"/>
+                                <exclude reference="2AJ-63-1SW"/>
+                                <exclude reference="EXl-yO-fK1"/>
+                                <include reference="RGc-Ed-2fc"/>
+                                <include reference="YA6-UL-Nsu"/>
+                                <include reference="bbv-M0-kbd"/>
+                                <exclude reference="28H-0g-s7u"/>
+                                <include reference="HsI-46-J6S"/>
+                                <exclude reference="ION-7h-eYq"/>
+                                <exclude reference="NYO-dR-MaH"/>
+                                <include reference="b3O-58-4H6"/>
+                                <exclude reference="Iy0-ka-fkq"/>
+                                <include reference="PHs-rw-dki"/>
+                                <exclude reference="WjW-EE-JPh"/>
+                                <include reference="kbv-59-rTM"/>
+                                <exclude reference="rFZ-9r-TPF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="categoryImage" destination="ocK-2q-k4g" id="2Ci-NW-ZCY"/>
@@ -100,19 +438,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+            <point key="canvasLocation" x="52.5" y="25"/>
         </scene>
         <!--Question View Controller-->
         <scene sceneID="ep6-3H-btZ">
             <objects>
                 <viewController id="g3t-CY-wD0" customClass="QuestionViewController" customModule="TriAgain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6en-Pl-AF4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-VX-Gou">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="UJ7-G7-C4w"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="wbM-5k-uWN"/>
                                 </constraints>
                                 <items>
@@ -135,62 +474,138 @@
                                     </mask>
                                 </variation>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wAY-pN-tRU">
-                                <rect key="frame" x="15" y="71.5" width="290" height="437"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wAY-pN-tRU">
+                                <rect key="frame" x="15" y="91.666666666666657" width="384" height="256.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1Y-ZN-7c5">
-                                        <rect key="frame" x="95" y="0.0" width="100" height="23.5"/>
+                                        <rect key="frame" x="142" y="0.0" width="100" height="23.333333333333332"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="33"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word • Word • Word " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyE-O2-dUQ">
-                                        <rect key="frame" x="36.5" y="48.5" width="217.5" height="81.5"/>
+                                        <rect key="frame" x="71.666666666666671" y="28.333333333333329" width="240.66666666666663" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="EIP-T6-LeU"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="50"/>
+                                        </variation>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="duQ-vY-ush">
-                                        <rect key="frame" x="15" y="155" width="260" height="30"/>
+                                        <rect key="frame" x="10" y="78.333333333333329" width="364" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                        </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nt-JF-fjg">
-                                        <rect key="frame" x="102" y="210" width="86" height="41"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
-                                        <state key="normal" title="Submit"/>
-                                        <connections>
-                                            <action selector="checkGuess:" destination="g3t-CY-wD0" eventType="touchUpInside" id="Zgu-F9-weK"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbX-1e-K05">
-                                        <rect key="frame" x="97" y="276" width="96" height="41"/>
+                                        <rect key="frame" x="153.66666666666666" y="113.33333333333331" width="77" height="36"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <state key="normal" title="Give Up"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
+                                        </variation>
                                         <connections>
                                             <action selector="giveUp:" destination="g3t-CY-wD0" eventType="touchUpInside" id="JqW-Fi-j7E"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nt-JF-fjg">
+                                        <rect key="frame" x="157.66666666666666" y="154.33333333333331" width="69" height="36"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                        <state key="normal" title="Submit"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="checkGuess:" destination="g3t-CY-wD0" eventType="touchUpInside" id="Zgu-F9-weK"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Again" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xx-VD-gnc">
-                                        <rect key="frame" x="76" y="342" width="138.5" height="35"/>
+                                        <rect key="frame" x="136.66666666666666" y="195.33333333333331" width="110.66666666666666" height="28"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="41"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-ZL-620">
-                                        <rect key="frame" x="105" y="402" width="80.5" height="35"/>
+                                        <rect key="frame" x="160" y="228.33333333333331" width="64.333333333333314" height="28"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="41"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-30" id="IRA-Bt-Fsn"/>
+                                    <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-200" id="IRA-Bt-Fsn"/>
+                                    <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-100" id="T1u-6G-ljO"/>
+                                    <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-20" id="k4f-al-hwt"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IRA-Bt-Fsn"/>
+                                        <exclude reference="T1u-6G-ljO"/>
+                                        <exclude reference="k4f-al-hwt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="T1u-6G-ljO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" spacing="8"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="k4f-al-hwt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="30">
+                                    <mask key="constraints">
+                                        <include reference="IRA-Bt-Fsn"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -199,10 +614,22 @@
                             <constraint firstItem="WyE-O2-dUQ" firstAttribute="top" secondItem="AIb-2v-OwB" secondAttribute="top" constant="100" id="IDS-r4-fVJ"/>
                             <constraint firstItem="lrP-VX-Gou" firstAttribute="top" secondItem="6en-Pl-AF4" secondAttribute="top" id="PPT-Le-MYX"/>
                             <constraint firstItem="wAY-pN-tRU" firstAttribute="centerX" secondItem="AIb-2v-OwB" secondAttribute="centerX" id="SvU-Oo-y98"/>
-                            <constraint firstItem="wAY-pN-tRU" firstAttribute="width" secondItem="6en-Pl-AF4" secondAttribute="width" constant="-30" id="cXf-JY-jB2"/>
+                            <constraint firstItem="wAY-pN-tRU" firstAttribute="width" secondItem="AIb-2v-OwB" secondAttribute="width" constant="-30" id="UUu-ia-k1f"/>
+                            <constraint firstItem="wAY-pN-tRU" firstAttribute="top" secondItem="lrP-VX-Gou" secondAttribute="bottom" constant="100" id="XSS-Jn-Fxa"/>
                             <constraint firstItem="lrP-VX-Gou" firstAttribute="leading" secondItem="AIb-2v-OwB" secondAttribute="leading" id="iQw-QS-6sS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AIb-2v-OwB"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="XSS-Jn-Fxa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="XSS-Jn-Fxa"/>
+                                <exclude reference="IDS-r4-fVJ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -226,33 +653,51 @@
             <objects>
                 <viewController id="sI6-Gf-1OL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYT-Qn-woS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="thq-ba-Pke">
-                                <rect key="frame" x="20" y="18.5" width="280" height="463.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="thq-ba-Pke">
+                                <rect key="frame" x="20" y="73.5" width="374" height="317.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tri Again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrg-vh-quM">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="69.5"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="61.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="53"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="71"/>
+                                        </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVa-6W-XgY">
-                                        <rect key="frame" x="0.0" y="119.5" width="280" height="344"/>
+                                        <rect key="frame" x="0.0" y="86.333333333333329" width="374" height="231.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tri Again is a trivia game where you must find the connection between three given words. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEM-vU-bhT">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="97.5"/>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="66"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                                </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yim-kF-Pbi">
-                                                <rect key="frame" x="0.0" y="114.5" width="280" height="229.5"/>
+                                                <rect key="frame" x="0.0" y="83.000000000000014" width="374" height="148.33333333333337"/>
                                                 <string key="text">Shake your device to generate a category. Then press the play button to get the question. When you believe that you have the solution type it into the input box. You have 3 tries to get the right answer. If you get it right the first time you get 3 points. Other wise a point is deducted each time., You also have the option to give up at any point. </string>
-                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
+                                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact-widthClass=compact">
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                                </variation>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -260,12 +705,13 @@
                                 <constraints>
                                     <constraint firstItem="Hrg-vh-quM" firstAttribute="width" secondItem="thq-ba-Pke" secondAttribute="width" id="Zvf-lt-NvQ"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="15"/>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tE-6v-aXn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                 <color key="backgroundColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="vR9-9t-sWd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="vR9-9t-sWd"/>
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="done" id="MgC-Bj-jGa">
@@ -279,14 +725,31 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0012979611055925488" green="0.11666571348905563" blue="0.28716495633125305" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="thq-ba-Pke" firstAttribute="top" secondItem="8tE-6v-aXn" secondAttribute="bottom" constant="100" id="0Tz-O1-D2T"/>
                             <constraint firstItem="thq-ba-Pke" firstAttribute="width" secondItem="UYT-Qn-woS" secondAttribute="width" constant="-40" id="7ny-lb-MMC"/>
-                            <constraint firstItem="thq-ba-Pke" firstAttribute="centerY" secondItem="LnI-FZ-TUl" secondAttribute="centerY" id="9Rn-q2-5dk"/>
+                            <constraint firstItem="thq-ba-Pke" firstAttribute="centerY" secondItem="LnI-FZ-TUl" secondAttribute="centerY" constant="20" id="9Rn-q2-5dk"/>
                             <constraint firstItem="8tE-6v-aXn" firstAttribute="top" secondItem="UYT-Qn-woS" secondAttribute="top" id="ZU1-Lk-Br6"/>
                             <constraint firstItem="8tE-6v-aXn" firstAttribute="trailing" secondItem="LnI-FZ-TUl" secondAttribute="trailing" id="do7-Km-Bto"/>
                             <constraint firstItem="8tE-6v-aXn" firstAttribute="leading" secondItem="LnI-FZ-TUl" secondAttribute="leading" id="mXu-TR-rA7"/>
                             <constraint firstItem="thq-ba-Pke" firstAttribute="centerX" secondItem="LnI-FZ-TUl" secondAttribute="centerX" id="sbC-SY-UD8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LnI-FZ-TUl"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0Tz-O1-D2T"/>
+                                <exclude reference="9Rn-q2-5dk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9Rn-q2-5dk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="0Tz-O1-D2T"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cuh-8O-HlI" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -131,6 +131,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.identifier)
         if segue.identifier == "questionSegue"{
             let questionViewController = segue.destination as! ViewController
             questionViewController.userGame.points! += points
