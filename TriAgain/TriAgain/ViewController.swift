@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var instructionLabel: UILabel!
     
     var userGame = Game()
     var category = 0
@@ -25,12 +26,15 @@ class ViewController: UIViewController {
         super.becomeFirstResponder()
         categoryImage.image = UIImage(named: "bluePlaceHolder")
         categoryLabel.isHidden = true
+        userGame.points = 0
+        instructionLabel.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {
         categoryImage.image = UIImage(named: "bluePlaceHolder")
         categoryLabel.isHidden = true
         playButton.isEnabled = false
+        instructionLabel.isHidden = false
     }
     
     override var canBecomeFirstResponder: Bool {
@@ -59,6 +63,7 @@ class ViewController: UIViewController {
                 categoryLabel.text = "Miscellaneous"
                 categoryImage.image = UIImage(named: "misc")
             }
+            instructionLabel.isHidden = true
             categoryImage.isHidden = false
             categoryLabel.isHidden = false
             playButton.isEnabled = true
@@ -82,11 +87,12 @@ class ViewController: UIViewController {
             pointsLabel.text = "Points: " + String(points)
             
         }
-        
-        
-        
     }
 
-
+    @IBAction func newGame(_ sender: UIBarButtonItem) {
+        userGame.points = 0
+        pointsLabel.text = "Points: 0"
+    }
+    
 }
 

@@ -25,11 +25,13 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     var question : String?
     var solution : String?
     var points = 3
+    var totPoints = 0
     var done = false //false when start, change when user either gives up or gets correct answer to disable checking
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        super.becomeFirstResponder()
         guessTextField.delegate = self
         submitButton.isEnabled = false
         gameData.loadData()
@@ -43,12 +45,18 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
            question = questions[0] + " • " + questions[1] + " • " +  questions[2]
             questionLabel.text = question!
         }
+        if userGame2.points != nil{
+            totPoints = userGame2.points!
+        }
         guessTextField.isUserInteractionEnabled = true
-        pointsLabel.isHidden = true
+        pointsLabel.text = "Total Points: " + String(totPoints)
         triAgainLabel.isHidden = true
-        
-        
-        
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
     }
     
     
@@ -60,7 +68,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         case 1:
             return "Category: Entertainment"
         case 2:
-            return "Category: Sports/ Recreation"
+            return "Category: Sports/Recreation"
         default:
             return "Category: Miscellaneous"
         }
@@ -72,10 +80,13 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
             return
         }
         if (guessTextField != nil){
-            if (guessTextField.text!.lowercased() == solution){
+            var userInput = guessTextField.text!.lowercased()
+            userInput = userInput.trimmingCharacters(in: .whitespacesAndNewlines) // reference: https://www.hackingwithswift.com/example-code/strings/how-to-trim-whitespace-in-a-string
+            if (userInput == solution){
                 triAgainLabel.text = "Great Job!"
                 triAgainLabel.isHidden = false
-                pointsLabel.text = "+" + String(points)
+                totPoints += points
+                pointsLabel.text = "+" + String(points) + ", Total Points: "+String(totPoints)
                 pointsLabel.isHidden = false
                 done = true
                 submitButton.isEnabled = false
@@ -85,13 +96,13 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
                 if points == 1 {
                     done = true
                     triAgainLabel.text = "Solution: " + solution!
-                    pointsLabel.text = "+0"
+                    pointsLabel.text = "+0, Total Points: "+String(totPoints)
                     submitButton.isEnabled = false
                     guessTextField.isUserInteractionEnabled = false
                     
                 }
                 else{
-                    triAgainLabel.text = "Tri Again!"
+                    triAgainLabel.text = "Try Again!"
                     points -= 1
                     if(points == 2){
                         pointsLabel.text =  "2 tries left"
@@ -106,6 +117,24 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if (motion == .motionShake) && done {
+            guessTextField.text = ""
+            let category = Int.random(in: 0 ..< 4)
+            categoryLabel.text = getCategory(randomNum: category)
+            solutions = gameData.getSolution(category: category)
+            let index = Int.random(in: 0 ..< solutions.count)
+            solution = solutions[index]
+            questions = gameData.getQuestion(category: category, index: index)
+            question = questions[0] + " • " + questions[1] + " • " +  questions[2]
+            questionLabel.text = question!
+            triAgainLabel.isHidden = true
+            pointsLabel.text = "Total Points: " + String(totPoints)
+            points = 3
+            done = false
+        }
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if (guessTextField != nil && !done){
@@ -117,12 +146,23 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    
+    @IBAction func touchDismissKeyboard(_ sender: UITapGestureRecognizer) {
+        guessTextField.resignFirstResponder()
+        if (guessTextField != nil && !done){
+            submitButton.isEnabled = true
+        }
+        else{
+            submitButton.isEnabled = false
+        }
+    }
+    
     @IBAction func giveUp(_ sender: Any) {
         done = true
         triAgainLabel.text = "Solution: " + solution!
         triAgainLabel.isHidden = false
-        pointsLabel.text = "+0"
-        pointsLabel.isHidden = true
+        pointsLabel.text = "+0, Total Points: " + String(points)
+        pointsLabel.isHidden = false
         points = 0
         submitButton.isEnabled = false
         guessTextField.isUserInteractionEnabled = false
@@ -131,10 +171,9 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(segue.identifier)
-        if segue.identifier == "questionSegue"{
+        if segue.identifier == "questionToCatSegue"{
             let questionViewController = segue.destination as! ViewController
-            questionViewController.userGame.points! += points
+            questionViewController.userGame.points = totPoints
         }
     }
     
