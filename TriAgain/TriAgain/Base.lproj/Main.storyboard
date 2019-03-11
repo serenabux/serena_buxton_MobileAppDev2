@@ -34,7 +34,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="2pI-sy-B6G"/>
                                     <barButtonItem title="Help" id="Fac-hm-tOH">
                                         <connections>
-                                            <segue destination="sI6-Gf-1OL" kind="presentation" identifier="helpFromStartSegue" id="ibm-Zp-sh4"/>
+                                            <segue destination="sI6-Gf-1OL" kind="presentation" identifier="helpSegue" id="ibm-Zp-sh4"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -290,6 +290,16 @@
                                 <exclude reference="tIY-Xl-xf0"/>
                                 <exclude reference="uGN-fi-SRh"/>
                                 <exclude reference="vWA-FQ-sZw"/>
+                                <exclude reference="5bd-bc-tMK"/>
+                                <exclude reference="FrZ-Gb-Lef"/>
+                                <exclude reference="JP6-5d-Im0"/>
+                                <exclude reference="UwS-5x-U2C"/>
+                                <exclude reference="Yi4-xp-wCq"/>
+                                <exclude reference="c2L-Za-JPb"/>
+                                <exclude reference="jR0-ln-lx0"/>
+                                <exclude reference="qKz-5W-ihp"/>
+                                <exclude reference="u3V-6u-WaP"/>
+                                <exclude reference="ua1-8d-G5a"/>
                                 <exclude reference="5AE-31-SoU"/>
                                 <exclude reference="8lg-uf-dqP"/>
                                 <exclude reference="BrX-ob-LUn"/>
@@ -306,16 +316,6 @@
                                 <exclude reference="MeO-1b-hru"/>
                                 <exclude reference="Q7C-lQ-NkM"/>
                                 <exclude reference="yCg-tW-dtT"/>
-                                <exclude reference="5bd-bc-tMK"/>
-                                <exclude reference="FrZ-Gb-Lef"/>
-                                <exclude reference="JP6-5d-Im0"/>
-                                <exclude reference="UwS-5x-U2C"/>
-                                <exclude reference="Yi4-xp-wCq"/>
-                                <exclude reference="c2L-Za-JPb"/>
-                                <exclude reference="jR0-ln-lx0"/>
-                                <exclude reference="qKz-5W-ihp"/>
-                                <exclude reference="u3V-6u-WaP"/>
-                                <exclude reference="ua1-8d-G5a"/>
                                 <exclude reference="04Z-pq-grV"/>
                                 <exclude reference="Ckc-az-ZV6"/>
                                 <exclude reference="EXl-yO-fK1"/>
@@ -358,13 +358,13 @@
                                 <include reference="OuX-Dx-rnv"/>
                                 <exclude reference="uGN-fi-SRh"/>
                                 <include reference="vWA-FQ-sZw"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <include reference="UwS-5x-U2C"/>
+                                <include reference="qKz-5W-ihp"/>
                                 <exclude reference="09J-VX-fuG"/>
                                 <exclude reference="4B8-d2-m6e"/>
                                 <include reference="BrX-ob-LUn"/>
                                 <include reference="TVb-Fm-5eE"/>
-                                <exclude reference="KYD-cc-PVC"/>
-                                <include reference="UwS-5x-U2C"/>
-                                <include reference="qKz-5W-ihp"/>
                                 <exclude reference="1un-l6-y2J"/>
                                 <exclude reference="2AJ-63-1SW"/>
                                 <include reference="Vf6-Om-oyF"/>
@@ -385,14 +385,14 @@
                                 <include reference="LJz-CX-gU3"/>
                                 <include reference="N3a-aH-4sG"/>
                                 <include reference="c7W-Dm-4J8"/>
+                                <include reference="5bd-bc-tMK"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <include reference="ua1-8d-G5a"/>
                                 <exclude reference="09J-VX-fuG"/>
                                 <exclude reference="4B8-d2-m6e"/>
                                 <include reference="5AE-31-SoU"/>
                                 <include reference="8lg-uf-dqP"/>
                                 <exclude reference="PJj-tE-PtS"/>
-                                <include reference="5bd-bc-tMK"/>
-                                <exclude reference="KYD-cc-PVC"/>
-                                <include reference="ua1-8d-G5a"/>
                                 <exclude reference="1un-l6-y2J"/>
                                 <exclude reference="2AJ-63-1SW"/>
                                 <include reference="HCf-Rw-t0M"/>
@@ -408,13 +408,13 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="cTl-9M-ElT"/>
+                                <include reference="jR0-ln-lx0"/>
                                 <exclude reference="ET6-oB-JSr"/>
                                 <exclude reference="5si-L9-BAr"/>
                                 <include reference="66j-8G-hoU"/>
                                 <include reference="Q7C-lQ-NkM"/>
                                 <exclude reference="ufo-eA-yGG"/>
                                 <include reference="yCg-tW-dtT"/>
-                                <include reference="jR0-ln-lx0"/>
                                 <exclude reference="2AJ-63-1SW"/>
                                 <include reference="Ckc-az-ZV6"/>
                                 <include reference="N7a-QQ-ko5"/>
@@ -430,6 +430,12 @@
                                 <exclude reference="CyI-v3-Ldi"/>
                                 <include reference="fQn-2e-mPe"/>
                                 <include reference="tIY-Xl-xf0"/>
+                                <exclude reference="FrZ-Gb-Lef"/>
+                                <include reference="JP6-5d-Im0"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <exclude reference="Yi4-xp-wCq"/>
+                                <include reference="c2L-Za-JPb"/>
+                                <exclude reference="u3V-6u-WaP"/>
                                 <exclude reference="09J-VX-fuG"/>
                                 <exclude reference="4B8-d2-m6e"/>
                                 <include reference="Dlz-MG-T8R"/>
@@ -440,12 +446,6 @@
                                 <include reference="8Xj-s1-2rI"/>
                                 <include reference="MeO-1b-hru"/>
                                 <exclude reference="ufo-eA-yGG"/>
-                                <exclude reference="FrZ-Gb-Lef"/>
-                                <include reference="JP6-5d-Im0"/>
-                                <exclude reference="KYD-cc-PVC"/>
-                                <exclude reference="Yi4-xp-wCq"/>
-                                <include reference="c2L-Za-JPb"/>
-                                <exclude reference="u3V-6u-WaP"/>
                                 <exclude reference="04Z-pq-grV"/>
                                 <exclude reference="1un-l6-y2J"/>
                                 <exclude reference="2AJ-63-1SW"/>
@@ -500,11 +500,6 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="woY-3o-gkL"/>
-                                    <barButtonItem title="Help" id="2Gc-hC-PWd">
-                                        <connections>
-                                            <segue destination="sI6-Gf-1OL" kind="presentation" identifier="questionToHelpSegue" id="Usq-fC-sq5"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -753,7 +748,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yim-kF-Pbi">
                                                 <rect key="frame" x="0.0" y="69.5" width="280" height="167"/>
-                                                <mutableString key="text">Shake your device to generate a category. Then press the play button to get the question. When you believe that you have the solution type it into the input box. You have 3 tries to get the right answer. If you get it right the first time you get 3 points. Other wise a point is deducted each time., You also have the option to give up at any point. Upon getting the right answer, running out of tries, or giving up you can either press 'done' to return to the category screen or you can shake your phone to get a new category on that page. </mutableString>
+                                                <string key="text">Shake your device to generate a category. Then press the play button to get the question. When you believe that you have the solution type it into the input box. You have 3 tries to get the right answer. If you get it right the first time you get 3 points. Other wise a point is deducted each time., You also have the option to give up at any point. Upon getting the right answer, running out of tries, or giving up you can either press 'done' to return to the category screen or you can shake your phone to get a new category on that page. </string>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -784,7 +779,7 @@
                                 <items>
                                     <barButtonItem systemItem="done" id="MgC-Bj-jGa">
                                         <connections>
-                                            <segue destination="Qhl-ma-BVl" kind="unwind" unwindAction="unwindSegue:" id="mq9-rM-4Vp"/>
+                                            <segue destination="Qhl-ma-BVl" kind="unwind" identifier="returnFromHelp" unwindAction="unwindSegue:" id="mq9-rM-4Vp"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -831,7 +826,4 @@
     <resources>
         <image name="sports" width="1309" height="1306"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ibm-Zp-sh4"/>
-    </inferredMetricsTieBreakers>
 </document>

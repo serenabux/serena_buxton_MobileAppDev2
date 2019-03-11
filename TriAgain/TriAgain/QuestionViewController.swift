@@ -32,6 +32,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         super.becomeFirstResponder()
+        
         guessTextField.delegate = self
         submitButton.isEnabled = false
         gameData.loadData()
@@ -59,6 +60,15 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func moveTextField(textField: UITextField, moveDistance: Int, up: Bool){
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        
+    }
+    
+
     
     //get the label for the category label
     func getCategory(randomNum : Int)->String{

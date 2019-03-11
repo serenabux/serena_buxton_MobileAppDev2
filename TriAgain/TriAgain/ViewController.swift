@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var instructionLabel: UILabel!
     
     var userGame = Game()
-    var category = 0
+    var category = -1
     var points = 0
     
     
@@ -31,15 +31,48 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        categoryImage.image = UIImage(named: "bluePlaceHolder")
-        categoryLabel.isHidden = true
-        playButton.isEnabled = false
-        instructionLabel.isHidden = false
+        if(userGame.category != nil){
+            if(userGame.category! != -1){
+                setCategoryInfo(cat: userGame.category!)
+            }
+            else{
+               categoryImage.image = UIImage(named: "bluePlaceHolder")
+                categoryLabel.isHidden = true
+                playButton.isEnabled = false
+                instructionLabel.isHidden = false
+            }
+        }
+        else{
+            categoryImage.image = UIImage(named: "bluePlaceHolder")
+            categoryLabel.isHidden = true
+            playButton.isEnabled = false
+            instructionLabel.isHidden = false
+        }
+        
+        
+        
     }
     
     override var canBecomeFirstResponder: Bool {
         get {
             return true
+        }
+    }
+    
+    func setCategoryInfo(cat: Int){
+        switch(cat){
+        case (0):
+            categoryLabel.text = "Education"
+            categoryImage.image = UIImage(named: "education")
+        case(1):
+            categoryLabel.text = "Entertainment"
+            categoryImage.image = UIImage(named: "entertainment")
+        case(2):
+            categoryLabel.text = "Sports/Recreation"
+            categoryImage.image = UIImage(named: "sports")
+        default:
+            categoryLabel.text = "Miscellaneous"
+            categoryImage.image = UIImage(named: "misc")
         }
     }
     
@@ -49,20 +82,7 @@ class ViewController: UIViewController {
         if motion == .motionShake {
             //random reference: https://learnappmaking.com/random-numbers-swift/
             category = Int.random(in: 0 ..< 4)
-            switch(category){
-            case (0):
-                categoryLabel.text = "Education"
-                categoryImage.image = UIImage(named: "education")
-            case(1):
-                categoryLabel.text = "Entertainment"
-                categoryImage.image = UIImage(named: "entertainment")
-            case(2):
-                categoryLabel.text = "Sports/Recreation"
-                categoryImage.image = UIImage(named: "sports")
-            default:
-                categoryLabel.text = "Miscellaneous"
-                categoryImage.image = UIImage(named: "misc")
-            }
+            setCategoryInfo(cat: category)
             instructionLabel.isHidden = true
             categoryImage.isHidden = false
             categoryLabel.isHidden = false
@@ -77,17 +97,36 @@ class ViewController: UIViewController {
             questionViewController.userGame2.category = category
             questionViewController.userGame2.points = points
             categoryImage.image = UIImage(named: "bluePlaceHolder")
-            
+            categoryLabel.isHidden = true
+        }
+        
+        if segue.identifier == "helpSegue"{
+            userGame.category = category
+            userGame.points = points
         }
     }
     
     @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
-        if(userGame.points != nil){
-            points += (userGame.points)!
-            pointsLabel.text = "Points: " + String(points)
-            
+        if segue.identifier == "questionToCatSegue"{
+            if(userGame.points != nil){
+                points += (userGame.points)!
+                pointsLabel.text = "Points: " + String(points)
+            }
+            userGame.category = -1
+            category = -1
+        }
+        if segue.identifier == "returnFromHelp"{
+            if (userGame.points != nil){
+                points = userGame.points!
+            }
+            if(userGame.category != nil){
+                category = userGame.category!
+            }
+
         }
     }
+    
+    
 
     @IBAction func newGame(_ sender: UIBarButtonItem) {
         userGame.points = 0
