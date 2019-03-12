@@ -25,7 +25,7 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>broken bone</string>
+			<string>fractures</string>
 			<key>question</key>
 			<array>
 				<string>Spiral</string>
@@ -161,7 +161,7 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>trunk</string>
+			<string>trunks</string>
 			<key>question</key>
 			<array>
 				<string>A car</string>

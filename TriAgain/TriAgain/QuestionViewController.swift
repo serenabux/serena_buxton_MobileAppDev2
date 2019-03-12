@@ -52,7 +52,52 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         guessTextField.isUserInteractionEnabled = true
         pointsLabel.text = "Total Points: " + String(totPoints)
         triAgainLabel.isHidden = true
+        
+        //listening for keyboard events - also from Paul Solt tutorial - like adding event listeners to webpage in JS
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
+    
+//    deinit { //need to make sure to do this to not mess things up - also from Paul Solt tutorial
+//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+//
+//    }
+
+    @objc func keyboardWillChange(notification: Notification){ //code to move screen when the keyboard pops up modified from video tutorial by Paul Solt at https://www.youtube.com/watch?v=iUQ1GfiVzS0 and https://www.youtube.com/watch?v=xVZubAMFuIU
+        if UIDevice.current.orientation.isLandscape && UIDevice.current.userInterfaceIdiom == .phone { //device orientation and userInterfaceIdiom found on apple documentation under UIDevice fter searching orientation and findign userInterfaceIdiom as a result for finding device type in google search
+            guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
+                return
+            }
+            if notification.name == UIResponder.keyboardWillChangeFrameNotification || notification.name == UIResponder.keyboardWillShowNotification{
+                view.frame.origin.y = -(keyboardRect.height)/2
+            }else{
+                view.frame.origin.y = 0
+            }
+        }
+    }
+    
+    
+    
+//    @objc func adjustForKeyboard(notification: Notification) {
+//        let userInfo = notification.userInfo!
+//
+//        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+//        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+//
+//        if notification.name == UIResponder.keyboardWillHideNotification {
+//            guessTextField.contentInset = UIEdgeInsets.zero
+//        } else {
+//            guessTextField.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+//        }
+//
+//        guessTextField.scrollIndicatorInsets = guessTextField.contentInset
+//
+//        let selectedRange = guessTextField.selectedRange
+//        guessTextField.scrollRangeToVisible(selectedRange)
+//    }
     
     override var canBecomeFirstResponder: Bool {
         get {
@@ -60,13 +105,6 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func moveTextField(textField: UITextField, moveDistance: Int, up: Bool){
-        let moveDuration = 0.3
-        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
-        
-        UIView.beginAnimations("animateTextField", context: nil)
-        
-    }
     
 
     
@@ -167,6 +205,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     @IBAction func giveUp(_ sender: Any) {
         done = true
         triAgainLabel.text = "Solution: " + solution!
@@ -186,6 +225,11 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
             questionViewController.userGame.points = totPoints
         }
     }
+    
+    
+   
+    
+    
     
     /*
     // MARK: - Navigation
