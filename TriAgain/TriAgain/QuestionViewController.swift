@@ -27,6 +27,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     var points = 3
     var totPoints = 0
     var done = false //false when start, change when user either gives up or gets correct answer to disable checking
+    var guesses = [String]()
 
     
     override func viewDidLoad() {
@@ -53,21 +54,17 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         pointsLabel.text = "Total Points: " + String(totPoints)
         triAgainLabel.isHidden = true
         
-        //listening for keyboard events - also from Paul Solt tutorial - like adding event listeners to webpage in JS
+        //listening for keyboard events
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
     
-//    deinit { //need to make sure to do this to not mess things up - also from Paul Solt tutorial
-//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-//        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-//
-//    }
-
-    @objc func keyboardWillChange(notification: Notification){ //code to move screen when the keyboard pops up modified from video tutorial by Paul Solt at https://www.youtube.com/watch?v=iUQ1GfiVzS0 and https://www.youtube.com/watch?v=xVZubAMFuIU
-        if UIDevice.current.orientation.isLandscape && UIDevice.current.userInterfaceIdiom == .phone { //device orientation and userInterfaceIdiom found on apple documentation under UIDevice fter searching orientation and findign userInterfaceIdiom as a result for finding device type in google search
+//move up text field upon keyboard pop up
+    //reference: https://www.youtube.com/watch?v=iUQ1GfiVzS0 and https://www.youtube.com/watch?v=xVZubAMFuIU
+    //additional reference: https://stackoverflow.com/questions/52466147/error-with-notification-names-while-converting-code-to-swift-4-2
+    @objc func keyboardWillChange(notification: Notification){
+        if UIDevice.current.orientation.isLandscape && UIDevice.current.userInterfaceIdiom == .phone {
             guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
                 return
             }
@@ -111,7 +108,13 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         if (guessTextField != nil){
             var userInput = guessTextField.text!.lowercased()
             userInput = userInput.trimmingCharacters(in: .whitespacesAndNewlines) // reference: https://www.hackingwithswift.com/example-code/strings/how-to-trim-whitespace-in-a-string
-            if (userInput == solution){
+            for g in guesses{
+                if g == userInput{
+                    triAgainLabel.text = "Repeat Guess, Try Again!"
+                    return
+                }
+            }
+            if (userInput == solution?.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)){
                 triAgainLabel.text = "Great Job!"
                 triAgainLabel.isHidden = false
                 totPoints += points
@@ -129,9 +132,11 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
                     submitButton.isEnabled = false
                     giveUpButton.isEnabled = false
                     guessTextField.isUserInteractionEnabled = false
+                    guesses = []
                     
                 }
                 else{
+                    guesses.append(userInput)
                     triAgainLabel.text = "Try Again!"
                     points -= 1
                     if(points == 2){
@@ -147,6 +152,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    //streamline the game
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if (motion == .motionShake) && done {
             guessTextField.text = ""
@@ -163,6 +169,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
             points = 3
             done = false
             giveUpButton.isEnabled = true
+            guessTextField.isUserInteractionEnabled = true
         }
     }
     

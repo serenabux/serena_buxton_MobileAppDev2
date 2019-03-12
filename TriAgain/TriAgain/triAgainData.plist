@@ -35,7 +35,7 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>australian cities</string>
+			<string>Australian cities</string>
 			<key>question</key>
 			<array>
 				<string>Brisbane</string>
@@ -47,7 +47,7 @@
 	<array>
 		<dict>
 			<key>solution</key>
-			<string>friends</string>
+			<string>Friends</string>
 			<key>question</key>
 			<array>
 				<string>Rachel</string>
@@ -77,12 +77,12 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>Donald Duck&apos;s nephews</string>
+			<string>Avengers</string>
 			<key>question</key>
 			<array>
-				<string>Huey</string>
-				<string>Dewey</string>
-				<string>Louie</string>
+				<string>Hulk</string>
+				<string>Iron Man</string>
+				<string>Captain America</string>
 			</array>
 		</dict>
 	</array>

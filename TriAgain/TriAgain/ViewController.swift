@@ -53,12 +53,14 @@ class ViewController: UIViewController {
         
     }
     
+    //in order to use shake
     override var canBecomeFirstResponder: Bool {
         get {
             return true
         }
     }
     
+    //sets label and image for category
     func setCategoryInfo(cat: Int){
         switch(cat){
         case (0):
@@ -108,6 +110,7 @@ class ViewController: UIViewController {
     
     @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
         if segue.identifier == "questionToCatSegue"{
+            //update the score based on points
             if(userGame.points != nil){
                 points += (userGame.points)!
                 pointsLabel.text = "Points: " + String(points)
@@ -125,12 +128,16 @@ class ViewController: UIViewController {
 
         }
     }
-    
-    
 
+    //reset the score and category
     @IBAction func newGame(_ sender: UIBarButtonItem) {
+        categoryImage.image = UIImage(named: "bluePlaceHolder")
+        categoryLabel.isHidden = true
         userGame.points = 0
+        instructionLabel.isHidden = false
         pointsLabel.text = "Points: 0"
+        userGame.category = -1
+        
     }
     
 }
