@@ -80,25 +80,6 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    
-//    @objc func adjustForKeyboard(notification: Notification) {
-//        let userInfo = notification.userInfo!
-//
-//        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-//        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
-//
-//        if notification.name == UIResponder.keyboardWillHideNotification {
-//            guessTextField.contentInset = UIEdgeInsets.zero
-//        } else {
-//            guessTextField.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
-//        }
-//
-//        guessTextField.scrollIndicatorInsets = guessTextField.contentInset
-//
-//        let selectedRange = guessTextField.selectedRange
-//        guessTextField.scrollRangeToVisible(selectedRange)
-//    }
-    
     override var canBecomeFirstResponder: Bool {
         get {
             return true
@@ -146,6 +127,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
                     triAgainLabel.text = "Solution: " + solution!
                     pointsLabel.text = "+0, Total Points: "+String(totPoints)
                     submitButton.isEnabled = false
+                    giveUpButton.isEnabled = false
                     guessTextField.isUserInteractionEnabled = false
                     
                 }
@@ -180,6 +162,7 @@ class QuestionViewController: UIViewController, UITextFieldDelegate {
             pointsLabel.text = "Total Points: " + String(totPoints)
             points = 3
             done = false
+            giveUpButton.isEnabled = true
         }
     }
     
