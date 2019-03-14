@@ -9,7 +9,7 @@
 import Foundation
 
 struct MovieDataModel: Decodable{
-    let name : String
+    var name : String
     let url : String
 }
 
@@ -42,5 +42,15 @@ class MovieDataModelController {
     
     func getURL(index:Int) -> String {
         return allData[index].url
+    }
+    
+    func deleteMovie(index:Int){
+        allData.remove(at: index)
+   }
+    
+    func addMovie( newName: String, newURL: String){
+        //create new movie instance
+        let m = MovieDataModel(name: newName, url: newURL)
+        allData.append(m)
     }
 }

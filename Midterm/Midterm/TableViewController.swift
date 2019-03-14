@@ -47,6 +47,7 @@ class TableViewController: UITableViewController {
     }
     
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -101,5 +102,18 @@ class TableViewController: UITableViewController {
         }
     }
     
-
+    @IBAction func unwindSegue (_ segue:UIStoryboardSegue){
+        if segue.identifier=="saveSegue"{
+            let source = segue.source as! AddViewController
+            if source.addedMovie.isEmpty == false && source.addedURL.isEmpty == false{
+                //add country to our data model instance
+            
+                movieData.addMovie(newName: source.addedMovie, newURL: source.addedURL)
+                //continentsData.addCountry(index: selectedContinent, newCountry: source.addedCountry, newIndex: countryList.count)
+                //add country to the array
+                movies.append(source.addedMovie)
+                tableView.reloadData()
+            }
+        }
+    }
 }

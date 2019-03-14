@@ -9,7 +9,12 @@
 import UIKit
 
 class AddViewController: UIViewController {
+    
+    var addedMovie = String()
+    var addedURL = String()
 
+    @IBOutlet weak var urlText: UITextField!
+    @IBOutlet weak var movieText: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +22,16 @@ class AddViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "saveSegue"{
+            //only add a country if there is text in the textfield
+            if movieText.text?.isEmpty == false{
+                addedMovie=movieText.text!
+            }
+            if urlText.text?.isEmpty == false{
+                addedURL=urlText.text!
+            }
+        }
     }
-    */
 
 }
