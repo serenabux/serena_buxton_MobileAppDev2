@@ -82,14 +82,24 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "movieInfoSegue"{
+            let detailVC = segue.destination as! MovieViewController
+            let indexPath = tableView.indexPath(for: sender as!
+                UITableViewCell)!
+            let m = movies[indexPath.row]
+            let url = movieData.getURL(index: indexPath.row)
+            //sets the data for the destination controller
+            detailVC.title = m
+            detailVC.webpage = url
+        }
     }
-    */
+    
 
 }
