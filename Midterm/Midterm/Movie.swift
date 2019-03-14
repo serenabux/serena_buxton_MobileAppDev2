@@ -29,18 +29,7 @@ class MovieDataModelController {
     }
     
     func loadData(){
-        /*if let pathURL = Bundle.main.url(forResource: fileName, withExtension: "plist"){
-            //creates a property list decoder object
-            let plistdecoder = PropertyListDecoder()
-            do {
-                let data = try Data(contentsOf: pathURL)
-                //decodes the property list
-                allData = try plistdecoder.decode([MovieDataModel].self, from: data)
-            } catch {
-                // handle error
-                print(error)
-            }
-        }*/
+
         
         let pathURL:URL?
         
