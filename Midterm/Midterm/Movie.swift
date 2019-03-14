@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MovieDataModel: Decodable{
+struct MovieDataModel: Codable{
     var name : String
     let url : String
 }
@@ -16,9 +16,20 @@ struct MovieDataModel: Decodable{
 class MovieDataModelController {
     var allData = [MovieDataModel]()
     let fileName = "movies"
+    let datafilename = "data.plist"
+    
+    func getDataFile(datafile: String) -> URL {
+        //get path for data file
+        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDir = dirPath[0] //documents directory
+        print(docDir)
+        
+        // URL for our plist
+        return docDir.appendingPathComponent(datafile)
+    }
     
     func loadData(){
-        if let pathURL = Bundle.main.url(forResource: fileName, withExtension: "plist"){
+        /*if let pathURL = Bundle.main.url(forResource: fileName, withExtension: "plist"){
             //creates a property list decoder object
             let plistdecoder = PropertyListDecoder()
             do {
@@ -29,6 +40,32 @@ class MovieDataModelController {
                 // handle error
                 print(error)
             }
+        }*/
+        
+        let pathURL:URL?
+        
+        // URL for our plist
+        let dataFileURL = getDataFile(datafile: datafilename)
+        print(dataFileURL)
+        
+        //if the data file exists, use it
+        if FileManager.default.fileExists(atPath: dataFileURL.path){
+            pathURL = dataFileURL
+        }
+        else {
+            // URL for our plist
+            pathURL = Bundle.main.url(forResource: fileName, withExtension: "plist")
+        }
+        
+        //creates a property list decoder object
+        let plistdecoder = PropertyListDecoder()
+        do {
+            let data = try Data(contentsOf: pathURL!)
+            //decodes the property list
+            allData = try plistdecoder.decode([MovieDataModel].self, from: data)
+        } catch {
+            // handle error
+            print(error)
         }
     }
     
@@ -52,5 +89,21 @@ class MovieDataModelController {
         //create new movie instance
         let m = MovieDataModel(name: newName, url: newURL)
         allData.append(m)
+    }
+    
+    func writeData(){
+        // URL for our plist
+        let dataFileURL = getDataFile(datafile: datafilename)
+        print(dataFileURL)
+        //creates a property list decoder object
+        let plistencoder = PropertyListEncoder()
+        plistencoder.outputFormat = .xml
+        do {
+            let data = try plistencoder.encode(allData.self)
+            try data.write(to: dataFileURL)
+        } catch {
+            // handle error
+            print(error)
+        }
     }
 }

@@ -17,12 +17,23 @@ class TableViewController: UITableViewController {
         super.viewDidLoad()
         movieData.loadData()
         movies=movieData.getMovies()
+        
+        //application instance
+        let app = UIApplication.shared
+        //subscribe to the UIApplicationWillResignActiveNotification notification
+        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController.applicationWillResignActive(_:)), name: UIApplication.willResignActiveNotification, object: app)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+
+
+    @objc func applicationWillResignActive(_ notification: NSNotification){
+        movieData.writeData()
     }
 
     // MARK: - Table view data source
