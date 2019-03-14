@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="RdX-zy-Rmj" kind="showDetail" identifier="movieInfoSegue" id="InW-KY-GHj"/>
+                                    <segue destination="RdX-zy-Rmj" kind="show" identifier="movieInfoSegue" id="iiM-pI-T3D"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -118,13 +118,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="trailing" secondItem="fEc-Pp-tk9" secondAttribute="trailing" id="43H-vy-HiP"/>
-                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="top" secondItem="fEc-Pp-tk9" secondAttribute="top" id="JaE-sr-e7w"/>
+                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="bottom" secondItem="fEc-Pp-tk9" secondAttribute="bottom" id="90K-at-Qog"/>
                             <constraint firstItem="zLj-cb-Cp4" firstAttribute="centerY" secondItem="eUw-q8-y7S" secondAttribute="centerY" id="N3s-7p-l8K"/>
-                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="leading" secondItem="fEc-Pp-tk9" secondAttribute="leading" id="PVa-Qt-eRO"/>
-                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="width" secondItem="eUw-q8-y7S" secondAttribute="width" id="Yi9-vX-uXy"/>
+                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="leading" secondItem="fEc-Pp-tk9" secondAttribute="leading" id="Xv1-62-zwh"/>
+                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="trailing" secondItem="fEc-Pp-tk9" secondAttribute="trailing" id="q3f-pL-clG"/>
                             <constraint firstItem="zLj-cb-Cp4" firstAttribute="centerX" secondItem="eUw-q8-y7S" secondAttribute="centerX" id="si5-2o-mgJ"/>
-                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="bottom" secondItem="fEc-Pp-tk9" secondAttribute="bottom" id="tN0-dt-Nvc"/>
+                            <constraint firstItem="aGp-P8-Zzx" firstAttribute="top" secondItem="eUw-q8-y7S" secondAttribute="top" constant="20" id="y48-3O-HSK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fEc-Pp-tk9"/>
                     </view>
@@ -158,6 +157,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="InW-KY-GHj"/>
+        <segue reference="iiM-pI-T3D"/>
     </inferredMetricsTieBreakers>
 </document>
