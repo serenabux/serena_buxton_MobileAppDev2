@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupcake" translatesAutoresizingMaskIntoConstraints="NO" id="c9Z-fS-LLk">
+                                <rect key="frame" x="317.33333333333337" y="-10.666666666666657" width="261.33333333333337" height="414.33333333333326"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c9Z-fS-LLk" secondAttribute="height" multiplier="367:581" id="4Vu-qB-WK7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="c9Z-fS-LLk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="DVn-FO-WaF"/>
+                            <constraint firstItem="c9Z-fS-LLk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Xg3-3J-40t"/>
+                            <constraint firstItem="c9Z-fS-LLk" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="fat-eh-pE2"/>
+                            <constraint firstItem="c9Z-fS-LLk" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="i6X-3W-olk">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-500"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="-800"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fat-eh-pE2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="fat-eh-pE2"/>
+                                <exclude reference="i6X-3W-olk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cupcake" width="400" height="581"/>
+    </resources>
+</document>
