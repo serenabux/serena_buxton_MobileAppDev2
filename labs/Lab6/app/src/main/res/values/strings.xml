@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab 6</string>
+    <string name="beansImage">Decorative Image of Coffee Beans</string>
+    <string name="mainHeader">Find the Perfect Brew For You</string>
+    <string name="brewImage">Image showing the equipment used to do this brew</string>
+    <string name="instructions">Instructions</string>
+    <string name="action_settings">Settings</string>
+    <string name="coffeePress">Brewing with a coffee press retains the precious natural oils that paper filters absorb, and extracts the coffee’s full flavor while giving it a consistency that’s thick and rich.</string>
+    <string name="pourOver">Pour-over is a beautifully simple and accessible way to brew a single cup of pour-over coffee with clean, fully developed flavor and body.</string>
+    <string name="icedPourOver">Iced pour-over is a simple and approachable way to make rich, full-flavored iced coffee one pitcher at a time.</string>
+    <string name="coffeeBrewer">Drip coffee is a convenient way to make great coffee. With the right grind and pure water, you can brew a fantastic cup of coffee in a coffee brewer.</string>
+</resources>
