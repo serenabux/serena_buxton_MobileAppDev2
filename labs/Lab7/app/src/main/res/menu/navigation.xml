@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_teaType"
+        android:icon="@drawable/ic_local_cafe_black_24dp"
+        android:title="@string/title_teas" />
+
+    <item
+        android:id="@+id/navigation_shop"
+        android:icon="@drawable/ic_local_grocery_store_black_24dp"
+        android:title="@string/title_shop" />
+
+    <item
+        android:id="@+id/navigation_tour"
+        android:icon="@drawable/ic_store_black_24dp"
+        android:title="@string/title_tour" />
+
+</menu>

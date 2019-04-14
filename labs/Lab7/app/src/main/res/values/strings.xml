@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="title_teas">Tea Type</string>
+    <string name="title_shop">Shop</string>
+    <string name="title_tour">Tour</string>
+
+    <string name="teaFragment">Tea Type Fragment</string>
+    <string name="storeFragment">Store Fragment</string>
+    <string name="tourFragment">Tour Fragment</string>
+
+    <string name="tourHeader">Tour Celestial Seasonings</string>
+    <string name="tourWeekday">Monday-Saturday:10am-4pm</string>
+    <string name="tourSun">Sunday:11am-3pm</string>
+    <string name="address">4600 Sleepytime Drive Boulder, CO 80301</string>
+    <string name="phoneNumber">303-581-1266</string>
+
+    <string name="csdescrip">Celestial Seasonings is a tea company based in Boulder, Colorado, United States that specializes in herbal teas, but also sells green, white, chai, and black teas. </string>
+
+
+</resources>
