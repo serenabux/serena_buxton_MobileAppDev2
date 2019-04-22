@@ -59,6 +59,13 @@ public class MainActivity extends AppCompatActivity {
                 final EditText sectionEditText = new EditText(MainActivity.this);
                 sectionEditText.setHint("Section of the grocery store?");
                 layout.addView(sectionEditText);
+//                final RadioGroup sectionRadGroup = new RadioGroup(MainActivity.this);
+//                sectionRadGroup.
+//                final RadioButton dairyRadButton = new RadioButton(MainActivity.this);
+//                final RadioButton produceRadButton = new RadioButton(MainActivity.this);
+//                layout.addView(sectionRadGroup);
+//                layout.addView(produceRadButton);
+//                layout.add(dairyRadButton);
 
                 AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
                 dialog.setTitle("Add Grocery Item");
