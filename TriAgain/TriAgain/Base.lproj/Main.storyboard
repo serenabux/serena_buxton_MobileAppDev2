@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TriAgain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5m3-JM-Hop">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5m3-JM-Hop">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <color key="backgroundColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="AxE-Zb-Wom"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="AxE-Zb-Wom"/>
                                     <constraint firstAttribute="height" constant="60" id="cDk-Tt-HgL"/>
                                 </constraints>
                                 <items>
@@ -52,18 +52,18 @@
                                 </variation>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syp-NI-YBb">
-                                <rect key="frame" x="64" y="94" width="192" height="41"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <rect key="frame" x="105" y="155" width="165" height="35"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6C-dS-uhe">
@@ -74,19 +74,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports/Recreation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zm-6A-rFp">
-                                <rect key="frame" x="30" y="376" width="282" height="37.5"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="37"/>
+                                <rect key="frame" x="79.333333333333314" y="431" width="238.33333333333337" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="23"/>
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="18"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="32"/>
+                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-hF-hTk">
-                                <rect key="frame" x="136" y="428.5" width="48" height="39"/>
+                                <rect key="frame" x="163.66666666666666" y="477.33333333333331" width="48" height="38.999999999999943"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                 <state key="normal" title="Play"/>
                                 <variation key="heightClass=compact-widthClass=compact">
@@ -103,7 +103,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sports" translatesAutoresizingMaskIntoConstraints="NO" id="ocK-2q-k4g">
-                                <rect key="frame" x="44.5" y="143" width="225" height="225"/>
+                                <rect key="frame" x="72" y="198" width="225" height="225"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="225" id="LbJ-sF-qk4"/>
                                     <constraint firstAttribute="width" constant="400" id="MX8-Lj-xnc"/>
@@ -158,7 +158,7 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szp-Hg-8Ad">
-                                <rect key="frame" x="112" y="475.5" width="96" height="27"/>
+                                <rect key="frame" x="139.66666666666666" y="524.33333333333337" width="96" height="26.666666666666629"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
                                 <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -170,13 +170,19 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Shake to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LzQ-PS-iac">
-                                <rect key="frame" x="0.0" y="248" width="320" height="29"/>
+                                <rect key="frame" x="0.0" y="300" width="375" height="29"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="40"/>
                                 </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tri Again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zD-S1-lom">
+                                <rect key="frame" x="122.66666666666669" y="55" width="130" height="35"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.11764705882352941" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -205,6 +211,7 @@
                             <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8lg-uf-dqP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szp-Hg-8Ad" secondAttribute="trailing" id="AZ0-Tb-kGB"/>
                             <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="BrX-ob-LUn"/>
+                            <constraint firstItem="7zD-S1-lom" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CNm-g6-edP"/>
                             <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="ocK-2q-k4g" secondAttribute="bottom" constant="8" id="Ckc-az-ZV6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Syp-NI-YBb" secondAttribute="trailing" id="CyI-v3-Ldi"/>
                             <constraint firstItem="ocK-2q-k4g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dlz-MG-T8R"/>
@@ -212,6 +219,7 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="mka-hF-hTk" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="Dwe-N5-heS"/>
+                            <constraint firstItem="7zD-S1-lom" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="-20" id="ECT-lK-EA3"/>
                             <constraint firstItem="ocK-2q-k4g" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="ET6-oB-JSr"/>
                             <constraint firstItem="2Zm-6A-rFp" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="EXl-yO-fK1"/>
                             <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="170" id="FrZ-Gb-Lef"/>
@@ -255,7 +263,7 @@
                             <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="14" id="el2-JE-tAK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mka-hF-hTk" secondAttribute="trailing" id="fQn-2e-mPe"/>
                             <constraint firstItem="mka-hF-hTk" firstAttribute="top" secondItem="2Zm-6A-rFp" secondAttribute="bottom" constant="15" id="fo4-1Z-ZiP"/>
-                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="24" id="jR0-ln-lx0"/>
+                            <constraint firstItem="Syp-NI-YBb" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="80" id="jR0-ln-lx0"/>
                             <constraint firstItem="2Zm-6A-rFp" firstAttribute="top" secondItem="Syp-NI-YBb" secondAttribute="bottom" constant="15" id="kJ0-2H-HBF"/>
                             <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="20" id="kbv-59-rTM"/>
                             <constraint firstItem="2Zm-6A-rFp" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="q9A-NK-xSK"/>
@@ -271,7 +279,7 @@
                             <constraint firstItem="Szp-Hg-8Ad" firstAttribute="top" secondItem="mka-hF-hTk" secondAttribute="bottom" constant="8" id="wga-XJ-1ct"/>
                             <constraint firstItem="ocK-2q-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="xHF-lU-egk"/>
                             <constraint firstItem="Szp-Hg-8Ad" firstAttribute="leading" secondItem="ocK-2q-k4g" secondAttribute="trailing" id="y4k-OE-vXc"/>
-                            <constraint firstItem="LzQ-PS-iac" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="178" id="yCg-tW-dtT"/>
+                            <constraint firstItem="LzQ-PS-iac" firstAttribute="top" secondItem="5m3-JM-Hop" secondAttribute="bottom" constant="225" id="yCg-tW-dtT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -293,16 +301,6 @@
                                 <exclude reference="tIY-Xl-xf0"/>
                                 <exclude reference="uGN-fi-SRh"/>
                                 <exclude reference="vWA-FQ-sZw"/>
-                                <exclude reference="5bd-bc-tMK"/>
-                                <exclude reference="FrZ-Gb-Lef"/>
-                                <exclude reference="JP6-5d-Im0"/>
-                                <exclude reference="UwS-5x-U2C"/>
-                                <exclude reference="Yi4-xp-wCq"/>
-                                <exclude reference="c2L-Za-JPb"/>
-                                <exclude reference="jR0-ln-lx0"/>
-                                <exclude reference="qKz-5W-ihp"/>
-                                <exclude reference="u3V-6u-WaP"/>
-                                <exclude reference="ua1-8d-G5a"/>
                                 <exclude reference="5AE-31-SoU"/>
                                 <exclude reference="8lg-uf-dqP"/>
                                 <exclude reference="BrX-ob-LUn"/>
@@ -319,6 +317,16 @@
                                 <exclude reference="MeO-1b-hru"/>
                                 <exclude reference="Q7C-lQ-NkM"/>
                                 <exclude reference="yCg-tW-dtT"/>
+                                <exclude reference="5bd-bc-tMK"/>
+                                <exclude reference="FrZ-Gb-Lef"/>
+                                <exclude reference="JP6-5d-Im0"/>
+                                <exclude reference="UwS-5x-U2C"/>
+                                <exclude reference="Yi4-xp-wCq"/>
+                                <exclude reference="c2L-Za-JPb"/>
+                                <exclude reference="jR0-ln-lx0"/>
+                                <exclude reference="qKz-5W-ihp"/>
+                                <exclude reference="u3V-6u-WaP"/>
+                                <exclude reference="ua1-8d-G5a"/>
                                 <exclude reference="04Z-pq-grV"/>
                                 <exclude reference="Ckc-az-ZV6"/>
                                 <exclude reference="EXl-yO-fK1"/>
@@ -361,13 +369,13 @@
                                 <include reference="OuX-Dx-rnv"/>
                                 <exclude reference="uGN-fi-SRh"/>
                                 <include reference="vWA-FQ-sZw"/>
-                                <exclude reference="KYD-cc-PVC"/>
-                                <include reference="UwS-5x-U2C"/>
-                                <include reference="qKz-5W-ihp"/>
                                 <exclude reference="09J-VX-fuG"/>
                                 <exclude reference="4B8-d2-m6e"/>
                                 <include reference="BrX-ob-LUn"/>
                                 <include reference="TVb-Fm-5eE"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <include reference="UwS-5x-U2C"/>
+                                <include reference="qKz-5W-ihp"/>
                                 <exclude reference="1un-l6-y2J"/>
                                 <exclude reference="2AJ-63-1SW"/>
                                 <include reference="Vf6-Om-oyF"/>
@@ -388,14 +396,14 @@
                                 <include reference="LJz-CX-gU3"/>
                                 <include reference="N3a-aH-4sG"/>
                                 <include reference="c7W-Dm-4J8"/>
-                                <include reference="5bd-bc-tMK"/>
-                                <exclude reference="KYD-cc-PVC"/>
-                                <include reference="ua1-8d-G5a"/>
                                 <exclude reference="09J-VX-fuG"/>
                                 <exclude reference="4B8-d2-m6e"/>
                                 <include reference="5AE-31-SoU"/>
                                 <include reference="8lg-uf-dqP"/>
                                 <exclude reference="PJj-tE-PtS"/>
+                                <include reference="5bd-bc-tMK"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <include reference="ua1-8d-G5a"/>
                                 <exclude reference="1un-l6-y2J"/>
                                 <exclude reference="2AJ-63-1SW"/>
                                 <include reference="HCf-Rw-t0M"/>
@@ -411,13 +419,13 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="cTl-9M-ElT"/>
-                                <include reference="jR0-ln-lx0"/>
                                 <exclude reference="ET6-oB-JSr"/>
                                 <exclude reference="5si-L9-BAr"/>
                                 <include reference="66j-8G-hoU"/>
                                 <include reference="Q7C-lQ-NkM"/>
                                 <exclude reference="ufo-eA-yGG"/>
                                 <include reference="yCg-tW-dtT"/>
+                                <include reference="jR0-ln-lx0"/>
                                 <exclude reference="2AJ-63-1SW"/>
                                 <include reference="Ckc-az-ZV6"/>
                                 <include reference="N7a-QQ-ko5"/>
@@ -433,12 +441,6 @@
                                 <exclude reference="CyI-v3-Ldi"/>
                                 <include reference="fQn-2e-mPe"/>
                                 <include reference="tIY-Xl-xf0"/>
-                                <exclude reference="FrZ-Gb-Lef"/>
-                                <include reference="JP6-5d-Im0"/>
-                                <exclude reference="KYD-cc-PVC"/>
-                                <exclude reference="Yi4-xp-wCq"/>
-                                <include reference="c2L-Za-JPb"/>
-                                <exclude reference="u3V-6u-WaP"/>
                                 <exclude reference="09J-VX-fuG"/>
                                 <exclude reference="4B8-d2-m6e"/>
                                 <include reference="Dlz-MG-T8R"/>
@@ -449,6 +451,12 @@
                                 <include reference="8Xj-s1-2rI"/>
                                 <include reference="MeO-1b-hru"/>
                                 <exclude reference="ufo-eA-yGG"/>
+                                <exclude reference="FrZ-Gb-Lef"/>
+                                <include reference="JP6-5d-Im0"/>
+                                <exclude reference="KYD-cc-PVC"/>
+                                <exclude reference="Yi4-xp-wCq"/>
+                                <include reference="c2L-Za-JPb"/>
+                                <exclude reference="u3V-6u-WaP"/>
                                 <exclude reference="04Z-pq-grV"/>
                                 <exclude reference="1un-l6-y2J"/>
                                 <exclude reference="2AJ-63-1SW"/>
@@ -487,14 +495,16 @@
             <objects>
                 <viewController id="g3t-CY-wD0" customClass="QuestionViewController" customModule="TriAgain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6en-Pl-AF4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-VX-Gou">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrP-VX-Gou">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="UJ7-G7-C4w"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="wbM-5k-uWN"/>
+                                    <constraint firstAttribute="height" constant="75" id="cdM-UH-zEA">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="50"/>
+                                        <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                                    </constraint>
                                 </constraints>
                                 <items>
                                     <barButtonItem systemItem="done" id="Bta-hP-Den">
@@ -505,17 +515,12 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="woY-3o-gkL"/>
                                 </items>
                                 <color key="barTintColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="wbM-5k-uWN"/>
-                                    </mask>
-                                </variation>
                             </toolbar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wAY-pN-tRU">
-                                <rect key="frame" x="15" y="91.5" width="290" height="256.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wAY-pN-tRU">
+                                <rect key="frame" x="15" y="155" width="345" height="406"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1Y-ZN-7c5">
-                                        <rect key="frame" x="95" y="0.0" width="100" height="23.5"/>
+                                        <rect key="frame" x="122.66666666666666" y="0.0" width="100" height="23.333333333333332"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -524,7 +529,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word • Word • Word " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyE-O2-dUQ">
-                                        <rect key="frame" x="24.5" y="28.5" width="241" height="45"/>
+                                        <rect key="frame" x="52.333333333333329" y="43.333333333333343" width="240.66666666666669" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="EIP-T6-LeU"/>
                                         </constraints>
@@ -542,7 +547,7 @@
                                         </variation>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="duQ-vY-ush">
-                                        <rect key="frame" x="10" y="78.5" width="270" height="30"/>
+                                        <rect key="frame" x="20" y="108.33333333333331" width="305" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -551,7 +556,7 @@
                                         </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nt-JF-fjg">
-                                        <rect key="frame" x="110.5" y="113.5" width="69" height="36"/>
+                                        <rect key="frame" x="138" y="158.33333333333331" width="69" height="36"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <state key="normal" title="Submit"/>
                                         <variation key="heightClass=compact-widthClass=compact">
@@ -568,7 +573,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbX-1e-K05">
-                                        <rect key="frame" x="106.5" y="154.5" width="77" height="36"/>
+                                        <rect key="frame" x="134" y="214.33333333333331" width="77" height="36"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <state key="normal" title="Give Up"/>
                                         <variation key="heightClass=compact-widthClass=compact">
@@ -585,7 +590,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Again" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xx-VD-gnc">
-                                        <rect key="frame" x="89.5" y="195.5" width="111" height="28"/>
+                                        <rect key="frame" x="117.33333333333334" y="270.33333333333331" width="110.66666666666666" height="28"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -600,7 +605,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAV-ZL-620">
-                                        <rect key="frame" x="113" y="228.5" width="64.5" height="28"/>
+                                        <rect key="frame" x="140.33333333333334" y="318.33333333333331" width="64.333333333333343" height="28"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -614,13 +619,19 @@
                                             <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="41"/>
                                         </variation>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press 'Done' or shake to get a new category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSX-gz-8kn">
+                                        <rect key="frame" x="49.000000000000014" y="366.33333333333337" width="247.33333333333337" height="39.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-200" id="IRA-Bt-Fsn"/>
                                     <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-100" id="T1u-6G-ljO"/>
                                     <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-150" id="WQm-wJ-03K"/>
-                                    <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-20" id="k4f-al-hwt"/>
+                                    <constraint firstItem="duQ-vY-ush" firstAttribute="width" secondItem="wAY-pN-tRU" secondAttribute="width" constant="-40" id="k4f-al-hwt"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -662,6 +673,9 @@
                         <constraints>
                             <constraint firstItem="lrP-VX-Gou" firstAttribute="trailing" secondItem="AIb-2v-OwB" secondAttribute="trailing" id="0BQ-4j-xEn"/>
                             <constraint firstItem="WyE-O2-dUQ" firstAttribute="top" secondItem="AIb-2v-OwB" secondAttribute="top" constant="100" id="IDS-r4-fVJ"/>
+                            <constraint firstItem="wAY-pN-tRU" firstAttribute="top" secondItem="lrP-VX-Gou" secondAttribute="bottom" constant="20" id="K9K-W2-Jv4">
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
                             <constraint firstItem="wAY-pN-tRU" firstAttribute="top" secondItem="AIb-2v-OwB" secondAttribute="top" constant="90" id="OHv-3W-JiL"/>
                             <constraint firstItem="lrP-VX-Gou" firstAttribute="top" secondItem="6en-Pl-AF4" secondAttribute="top" id="PPT-Le-MYX"/>
                             <constraint firstItem="wAY-pN-tRU" firstAttribute="centerX" secondItem="AIb-2v-OwB" secondAttribute="centerX" id="SvU-Oo-y98"/>
@@ -676,11 +690,12 @@
                                 <exclude reference="iQw-QS-6sS"/>
                                 <exclude reference="OHv-3W-JiL"/>
                                 <exclude reference="XSS-Jn-Fxa"/>
+                                <exclude reference="IDS-r4-fVJ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="OHv-3W-JiL"/>
+                                <exclude reference="OHv-3W-JiL"/>
                                 <exclude reference="IDS-r4-fVJ"/>
                             </mask>
                         </variation>
@@ -702,6 +717,7 @@
                         <outlet property="categoryLabel" destination="c1Y-ZN-7c5" id="2Fq-Sr-R9o"/>
                         <outlet property="giveUpButton" destination="dbX-1e-K05" id="b1v-d5-QYW"/>
                         <outlet property="guessTextField" destination="duQ-vY-ush" id="ZEU-RZ-pup"/>
+                        <outlet property="instructionsLabel" destination="wSX-gz-8kn" id="1Gu-qk-01e"/>
                         <outlet property="pointsLabel" destination="IAV-ZL-620" id="O2H-ao-LN2"/>
                         <outlet property="questionLabel" destination="WyE-O2-dUQ" id="nWj-ms-rxB"/>
                         <outlet property="submitButton" destination="2Nt-JF-fjg" id="2it-wc-gNR"/>
@@ -723,14 +739,14 @@
             <objects>
                 <viewController id="sI6-Gf-1OL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYT-Qn-woS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="thq-ba-Pke">
-                                <rect key="frame" x="20" y="78.5" width="280" height="323"/>
+                                <rect key="frame" x="20" y="267.33333333333337" width="335" height="277.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tri Again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrg-vh-quM">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="61.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="61.333333333333336"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="53"/>
                                         <color key="textColor" red="0.94901960780000005" green="0.50980392159999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -742,10 +758,10 @@
                                         </variation>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="fVa-6W-XgY">
-                                        <rect key="frame" x="0.0" y="86.5" width="280" height="236.5"/>
+                                        <rect key="frame" x="0.0" y="86.333333333333371" width="335" height="191"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tri Again is a trivia game where you must find the connection between three given words. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEM-vU-bhT">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="52.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="19"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -760,7 +776,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yim-kF-Pbi">
-                                                <rect key="frame" x="0.0" y="69.5" width="280" height="167"/>
+                                                <rect key="frame" x="0.0" y="52" width="335" height="139"/>
                                                 <string key="text">Shake your device to generate a category. Then press the play button to get the question. When you believe that you have the solution type it into the input box. You have 3 tries to get the right answer. If you get it right the first time you get 3 points. Other wise a point is deducted each time., You also have the option to give up at any point. Upon getting the right answer, running out of tries, or giving up you can either press 'done' to return to the category screen or you can shake your phone to get a new category on that page. </string>
                                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -784,7 +800,7 @@
                                 <variation key="heightClass=compact-widthClass=compact" spacing="15"/>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8tE-6v-aXn">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <color key="backgroundColor" red="0.001297961106" green="0.1166657135" blue="0.2871649563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="vR9-9t-sWd"/>

@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var userGame = Game()
     var category = -1
     var points = 0
+    var setCategory = false
     
     
     override func viewDidLoad() {
@@ -28,30 +29,15 @@ class ViewController: UIViewController {
         categoryLabel.isHidden = true
         userGame.points = 0
         instructionLabel.isHidden = false
+        setCategory = false
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if(userGame.category != nil){
-            if(userGame.category! != -1){
-                setCategoryInfo(cat: userGame.category!)
-            }
-            else{
-               categoryImage.image = UIImage(named: "bluePlaceHolder")
-                categoryLabel.isHidden = true
-                playButton.isEnabled = false
-                instructionLabel.isHidden = false
-            }
-        }
-        else{
-            categoryImage.image = UIImage(named: "bluePlaceHolder")
-            categoryLabel.isHidden = true
-            playButton.isEnabled = false
-            instructionLabel.isHidden = false
-        }
-        
-        
-        
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//
+//
+//
+//
+//    }
     
     //in order to use shake
     override var canBecomeFirstResponder: Bool {
@@ -83,13 +69,15 @@ class ViewController: UIViewController {
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             //random reference: https://learnappmaking.com/random-numbers-swift/
-            category = Int.random(in: 0 ..< 4)
-            setCategoryInfo(cat: category)
-            instructionLabel.isHidden = true
-            categoryImage.isHidden = false
-            categoryLabel.isHidden = false
-            playButton.isEnabled = true
-            
+            if setCategory == false{
+                category = Int.random(in: 0 ..< 4)
+                setCategoryInfo(cat: category)
+                instructionLabel.isHidden = true
+                categoryImage.isHidden = false
+                categoryLabel.isHidden = false
+                playButton.isEnabled = true
+                setCategory = true
+            }
         }
     }
     
@@ -115,8 +103,43 @@ class ViewController: UIViewController {
                 points += (userGame.points)!
                 pointsLabel.text = "Points: " + String(points)
             }
-            userGame.category = -1
-            category = -1
+            if(userGame.catSet != nil){
+                if(userGame.catSet == true){
+                    category = Int.random(in: 0 ..< 4)
+                    userGame.category = category
+                    setCategoryInfo(cat: category)
+                    instructionLabel.isHidden = true
+                    categoryImage.isHidden = false
+                    categoryLabel.isHidden = false
+                    playButton.isEnabled = true
+                    setCategory = true
+                }
+                else{
+                    if(userGame.category != nil){
+                        if(userGame.category! != -1){
+                            setCategoryInfo(cat: userGame.category!)
+                            setCategory = true
+                        }
+                        else{
+                            categoryImage.image = UIImage(named: "bluePlaceHolder")
+                            categoryLabel.isHidden = true
+                            playButton.isEnabled = false
+                            instructionLabel.isHidden = false
+                            setCategory = false
+                        }
+                    }
+                    else{
+                        categoryImage.image = UIImage(named: "bluePlaceHolder")
+                        categoryLabel.isHidden = true
+                        playButton.isEnabled = false
+                        instructionLabel.isHidden = false
+                        setCategory = false
+                    }
+                }
+                
+            }
+            
+            
         }
         if segue.identifier == "returnFromHelp"{
             if (userGame.points != nil){

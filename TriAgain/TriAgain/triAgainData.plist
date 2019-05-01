@@ -5,7 +5,7 @@
 	<array>
 		<dict>
 			<key>solution</key>
-			<string>first wives</string>
+			<string>First ladies</string>
 			<key>question</key>
 			<array>
 				<string>Dolly</string>
@@ -15,17 +15,17 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>flightless birds</string>
+			<string>Flightless birds</string>
 			<key>question</key>
 			<array>
-				<string>penguin</string>
-				<string>kiwi</string>
-				<string>ostrich</string>
+				<string>Penguin</string>
+				<string>Kiwi</string>
+				<string>Ostrich</string>
 			</array>
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>fractures</string>
+			<string>Fractures</string>
 			<key>question</key>
 			<array>
 				<string>Spiral</string>
@@ -41,6 +41,46 @@
 				<string>Brisbane</string>
 				<string>Darwin</string>
 				<string>Hobart</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Programming Languages</string>
+			<key>question</key>
+			<array>
+				<string>Python</string>
+				<string>Java</string>
+				<string>Swift</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Currency</string>
+			<key>question</key>
+			<array>
+				<string>Yen</string>
+				<string>Pound</string>
+				<string>Euro</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Metals</string>
+			<key>question</key>
+			<array>
+				<string>Gold</string>
+				<string>Silver</string>
+				<string>Zinc</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Hello</string>
+			<key>question</key>
+			<array>
+				<string>Hola</string>
+				<string>Konnichiwa</string>
+				<string>Zdravstvuyte</string>
 			</array>
 		</dict>
 	</array>
@@ -85,11 +125,31 @@
 				<string>Captain America</string>
 			</array>
 		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Looney Tunes</string>
+			<key>question</key>
+			<array>
+				<string>Daffy</string>
+				<string>Tweety</string>
+				<string>Road Runner</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Musicals</string>
+			<key>question</key>
+			<array>
+				<string>Cats</string>
+				<string>Pippin</string>
+				<string>Hamilton</string>
+			</array>
+		</dict>
 	</array>
 	<array>
 		<dict>
 			<key>solution</key>
-			<string>tennis</string>
+			<string>Tennis</string>
 			<key>question</key>
 			<array>
 				<string>net</string>
@@ -99,7 +159,17 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>gymnastics</string>
+			<string>Volleyball</string>
+			<key>question</key>
+			<array>
+				<string>pancake</string>
+				<string>sand</string>
+				<string>bump</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Gymnastics</string>
 			<key>question</key>
 			<array>
 				<string>Vault</string>
@@ -131,7 +201,17 @@
 	<array>
 		<dict>
 			<key>solution</key>
-			<string>reflect</string>
+			<string>Tables</string>
+			<key>question</key>
+			<array>
+				<string>Pool</string>
+				<string>Card</string>
+				<string>Picnic</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Reflect</string>
 			<key>question</key>
 			<array>
 				<string>Satellite</string>
@@ -141,7 +221,7 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>filled</string>
+			<string>Filled</string>
 			<key>question</key>
 			<array>
 				<string>A cavity</string>
@@ -151,7 +231,7 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>bags</string>
+			<string>Bags</string>
 			<key>question</key>
 			<array>
 				<string>Tea</string>
@@ -161,12 +241,42 @@
 		</dict>
 		<dict>
 			<key>solution</key>
-			<string>trunks</string>
+			<string>Trunks</string>
 			<key>question</key>
 			<array>
 				<string>A car</string>
 				<string> A tree</string>
 				<string>An elephant</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Worms</string>
+			<key>question</key>
+			<array>
+				<string>Earth</string>
+				<string>Book</string>
+				<string>Inch</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>Cards</string>
+			<key>question</key>
+			<array>
+				<string>Greeting</string>
+				<string>Credit</string>
+				<string>Library</string>
+			</array>
+		</dict>
+		<dict>
+			<key>solution</key>
+			<string>tuned</string>
+			<key>question</key>
+			<array>
+				<string>Radio</string>
+				<string>Car Engine</string>
+				<string>Piano</string>
 			</array>
 		</dict>
 	</array>

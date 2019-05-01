@@ -11,4 +11,5 @@ import Foundation
 class Game {
     var points : Int?
     var category : Int?
+    var catSet : Bool?
 }

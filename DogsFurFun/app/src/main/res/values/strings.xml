@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Dogs Fur Fun</string>
+    <string name="title_dog">Dog</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_adopt">Adopt</string>
+
+
+    <string name="dog_fragment">Dog fragment</string>
+    <string name="fav_fragment">Fav fragment</string>
+    <string name="adopt_fragment">Adopt fragment</string>
+    <string name="button">Another Dog!</string>
+
+</resources>
