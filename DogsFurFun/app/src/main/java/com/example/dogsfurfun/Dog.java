@@ -13,7 +13,7 @@ public class Dog {
     private String height;
     private String bredFor;
     private String lifeSpan;
-    private List<String> imageURLS = new ArrayList<String>();
+    private ArrayList<String> imageURLS = new ArrayList<String>();
 
     public Dog(){
         // Default constructor required for calls to DataSnapshot.getValue(Recipe.class)
@@ -59,7 +59,7 @@ public class Dog {
         return weight;
     }
 
-    public List<String> getImageURLS() {
+    public ArrayList<String> getImageURLS() {
         return imageURLS;
     }
 }

@@ -28,7 +28,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:16.1.0'
     implementation 'com.firebaseui:firebase-ui-database:4.3.2'
 
-    implementation ('com.squareup.picasso:picasso:2.71828') {
+    implementation('com.squareup.picasso:picasso:2.71828') {
         exclude group: 'com.android.support'
         exclude module: ['exifinterface', 'support-annotations']
     }

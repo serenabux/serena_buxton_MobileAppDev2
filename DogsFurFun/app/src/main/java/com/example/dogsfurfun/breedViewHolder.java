@@ -13,7 +13,7 @@ public class breedViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         breedName = itemView.findViewById(R.id.listBreedText);
     }
-    public void setRecipeName(String name){
+    public void setBreedName(String name){
         breedName.setText(name);
     }
 }

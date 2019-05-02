@@ -1,13 +1,20 @@
 package com.example.dogsfurfun;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -33,7 +40,7 @@ public class FavoritesFragment extends Fragment {
     //array list of recipes
     List<Dog> breeds = new ArrayList<>();
     //Firebase database dogBreed node reference
-    DatabaseReference reciperef = FirebaseDatabase.getInstance().getReference("DogsFurFun");
+    DatabaseReference ref = FirebaseDatabase.getInstance().getReference("DogBreeds");
     //define an adapter
     FirebaseRecyclerAdapter adapter;
 
@@ -45,7 +52,7 @@ public class FavoritesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_favorites, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_favorites, container, false);
         //define a query
         Query query = FirebaseDatabase.getInstance().getReference().child("DogBreeds");
         //define a parser
@@ -85,9 +92,65 @@ public class FavoritesFragment extends Fragment {
                 return new breedViewHolder(view);
             }
             @Override
-            protected void onBindViewHolder(@NonNull breedViewHolder holder, int position, @NonNull
-                    Dog model) {
-                holder.setRecipeName(model.getBreed());
+            protected void onBindViewHolder(@NonNull final breedViewHolder holder, int position, @NonNull
+                    final Dog model) {
+                holder.setBreedName(model.getBreed());
+
+                //onclick listener
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //get breed that was pressed
+                        int position = holder.getAdapterPosition();
+                        //reference: https://stackoverflow.com/questions/37891277/get-current-activity-from-fragment
+                        //reference: https://stackoverflow.com/questions/28984879/how-to-open-a-different-fragment-on-recyclerview-onclick
+                        //reference:https://stackoverflow.com/questions/34310592/how-open-fragment-from-recyclerview-adaptercardadapter-viewholder
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("breed", breeds.get(position).getBreed());
+                        bundle.putString("weight", breeds.get(position).getWeight());
+                        bundle.putString("height", breeds.get(position).getHeight());
+                        bundle.putString("lifeSpan", breeds.get(position).getLifeSpan());
+                        bundle.putString("temp", breeds.get(position).getTemperat());
+                        bundle.putString("bredFor", breeds.get(position).getBredFor());
+                        bundle.putStringArrayList("urls", breeds.get(position).getImageURLS());
+
+                        Fragment newFragment = new DogBreedDetailFragment();
+                        newFragment.setArguments(bundle);
+
+                        ((MainActivity)getActivity()).loadFragment(newFragment);
+                        //activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, myFragment).addToBackStack(null).commit();
+
+                    }
+                });
+
+
+                //Deal with delete
+                //context menu
+                holder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener() {
+                    @Override
+                    public void onCreateContextMenu(ContextMenu menu, final View v, ContextMenu.ContextMenuInfo menuInfo) {
+                        //set the menu title
+                        menu.setHeaderTitle("Delete " + model.getBreed());
+                        //add the choices to the menu
+                        menu.add(1, 1, 1, "Yes").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+                                //get breed that was pressed
+                                int position = holder.getAdapterPosition();
+                                //get breed id
+                                String breedId = breeds.get(position).getId();
+                                //delete from Firebase
+                                ref.child(breedId).removeValue();
+                                Snackbar.make(v, "Item removed", Snackbar.LENGTH_LONG)
+                                        .setAction("Action", null).show();
+
+                                return false;
+                            }
+                        });
+                        menu.add(2, 2, 2, "No");
+                    }
+                });
             }
         };
 
@@ -116,6 +179,8 @@ public class FavoritesFragment extends Fragment {
         super.onStop();
         adapter.stopListening();
     }
+
+
 
 
 }

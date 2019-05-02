@@ -3,16 +3,19 @@
 
     <item
         android:id="@+id/navigation_dog"
+        android:fontFamily="@font/delius"
         android:icon="@drawable/ic_pets_black_24dp"
         android:title="@string/title_dog" />
 
     <item
         android:id="@+id/navigation_favorites"
+        android:fontFamily="@font/delius"
         android:icon="@drawable/ic_favorite_black_24dp"
         android:title="@string/title_favorites" />
 
     <item
         android:id="@+id/navigation_adopt"
+        android:fontFamily="@font/delius"
         android:icon="@drawable/ic_adopt"
         android:title="@string/title_adopt" />
 

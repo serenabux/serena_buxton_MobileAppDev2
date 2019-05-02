@@ -10,4 +10,6 @@
     <string name="adopt_fragment">Adopt fragment</string>
     <string name="button">Another Dog!</string>
 
+    <string name="loading">Loading...</string>
+
 </resources>
