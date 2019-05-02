@@ -14,10 +14,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -50,7 +52,6 @@ import java.util.List;
  */
 public class DogFragment extends Fragment {
 
-    String urlTest;
     ImageView imageView;
     private String imageURL;
     TextView breedNameText;
@@ -81,7 +82,16 @@ public class DogFragment extends Fragment {
     }
 
 
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
+
+        if (savedInstanceState != null) {
+            // Restore last state for checked position.
+            breed = savedInstanceState.getString("breed");
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -100,7 +110,29 @@ public class DogFragment extends Fragment {
         anotherDogButton = rootView.findViewById(R.id.button);
         fab = rootView.findViewById(R.id.floatingActionButton);
 
-        if(savedInstanceState != null){
+       Bundle args = getArguments();
+       //hacky way to maintian upon rotation
+       if (args!=null)
+       {
+           breed = args.getString("breeds");
+           temperament = args.getString("temp");
+           weight = args.getString("weight");
+           height=args.getString("height");
+           lifeSpan=args.getString("lifeSpan");
+           bredFor=args.getString("bredFor");
+           imageURL = args.getStringArrayList("images").get(0);
+           breedNameText.setText(breed);
+           weightText.setText("Weight: " + weight + " pounds");
+           heightText.setText("Height: " + height + " inches");
+           bredforText.setText("Bred for: " + bredFor);
+           lifeExpectancyText.setText("Life Span: " + lifeSpan);
+           temperateText.setText(temperament);
+           imageView.setVisibility(View.VISIBLE);
+           Picasso.get().load(imageURL).into(imageView);
+       }
+
+
+        else if(savedInstanceState != null){
             breed = savedInstanceState.getString("breed");
             height = savedInstanceState.getString("height");
             weight = savedInstanceState.getString("weight");
@@ -232,6 +264,10 @@ public class DogFragment extends Fragment {
                 temperament = breeds.getString("temperament");
                 imageURL = data.getString("url");
                 if (breed != null && imageURL!= null) {
+                    List<String> imageURLS=new ArrayList<String>();
+                    imageURLS.add(imageURL);
+                    Dog dog  = new Dog("",breed,temperament,weight,height,bredFor,lifeSpan,imageURLS);
+                    ((MainActivity) getActivity()).getResults(dog);
                     breedNameText.setText(breed);
                     weightText.setText("Weight: " + weight + " pounds");
                     heightText.setText("Height: " + height + " inches");

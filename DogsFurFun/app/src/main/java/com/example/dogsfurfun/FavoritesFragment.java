@@ -68,7 +68,7 @@ public class FavoritesFragment extends Fragment {
                 String temperament = snapshot.child("temperament").getValue().toString();
                 String bredFor = snapshot.child("bredFor").getValue().toString();
                  Iterable<DataSnapshot> imageUrlsData = snapshot.child("imageURL").getChildren();
-                List<String> imageURLS=new ArrayList<String>();;
+                List<String> imageURLS=new ArrayList<String>();
                 for(DataSnapshot data: imageUrlsData){
                     imageURLS.add(data.getValue().toString());
                 }
