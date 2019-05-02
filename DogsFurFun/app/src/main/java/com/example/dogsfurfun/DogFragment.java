@@ -45,6 +45,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -74,7 +75,8 @@ public class DogFragment extends Fragment {
     //define an adapter
     FirebaseRecyclerAdapter adapter;
     DatabaseReference breedNameRef = rootRef.child("breedName");
-
+    //array list of recipes
+    List<Dog> breeds = new ArrayList<>();
 
 
     public DogFragment() {
@@ -129,6 +131,8 @@ public class DogFragment extends Fragment {
            temperateText.setText(temperament);
            imageView.setVisibility(View.VISIBLE);
            Picasso.get().load(imageURL).into(imageView);
+           Dog dog  = new Dog("",breed,temperament,weight,height,bredFor,lifeSpan,args.getStringArrayList("images"));
+           ((MainActivity) getActivity()).getResults(dog);
        }
 
 
@@ -165,10 +169,12 @@ public class DogFragment extends Fragment {
             public void onClick(View v) {
                 if (breed != null) {
                     //check if breed already exists
-                    //reference: https://stackoverflow.com/questions/38948905/how-can-i-check-if-a-value-exists-already-in-a-firebase-data-class-android
+                    //based on reference: https://stackoverflow.com/questions/38948905/how-can-i-check-if-a-value-exists-already-in-a-firebase-data-class-android
+                    //wasn't quite working, hacky solution
                     rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
+
                             ArrayList<String> images = new ArrayList<String>();
                             images.add(imageURL);
                             String key = "";
@@ -176,10 +182,11 @@ public class DogFragment extends Fragment {
                                 //check if the breed is already in database
                                 String dataKey = data.getKey();
                                 DatabaseReference test = rootRef.child(dataKey).child("breedName");
-                                DataSnapshot test2 = data.child(dataKey);
-                                Object test3 = data.child(dataKey).child("breedName").getValue();
-                                if (data.child(dataKey).child("breedName").exists()) {
-                                    key = data.getKey();
+                                Object hash = data.getValue();
+                                Map<String,String> cast = (Map<String, String>)hash;
+                                String b = cast.get("breedName");
+                                if (b == breed) {
+                                    cast.get("id");
                                 }
                             }
                             if(key!=""){
