@@ -1,8 +1,10 @@
 package com.example.androidfinal;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,6 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements ResturantAdapter.ListItemClickListener {
 
@@ -25,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
         //define an adapter
-        ResturantAdapter adapter = new ResturantAdapter(Resturant.boulderFood, this);
+        final ResturantAdapter adapter = new ResturantAdapter(Resturant.boulderFood, this);
 
         //divider line between rows
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
@@ -40,8 +44,39 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //create a vertical linear layout to hold edit texts
+                LinearLayout layout = new LinearLayout(MainActivity.this);
+                layout.setOrientation(LinearLayout.VERTICAL);
+                final EditText resturantEditText = new EditText(MainActivity.this);
+                resturantEditText.setHint("Resturant Name");
+                layout.addView(resturantEditText);
+                final EditText urlEditText = new EditText(MainActivity.this);
+                urlEditText.setHint("URL Name");
+                layout.addView(urlEditText);
+                AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+                dialog.setTitle("Add Resturant");
+                dialog.setView(layout);
+                //sets OK action
+                dialog.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        //get item entered
+                        String newResturant = resturantEditText.getText().toString();
+                        String newURL = urlEditText.getText().toString();
+                        if (!newResturant.isEmpty() && !newURL.isEmpty()) {
+                            // add item
+                            adapter.addResturant(newResturant,newURL);
+                        }
+                    }
+                });
+                //sets cancel action
+                dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        // cancel
+                    }
+                });
+                //present alert dialog
+                dialog.show();
+
             }
         });
     }

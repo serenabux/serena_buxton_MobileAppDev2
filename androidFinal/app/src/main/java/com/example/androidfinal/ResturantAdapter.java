@@ -60,4 +60,9 @@ public class ResturantAdapter extends RecyclerView.Adapter<ResturantAdapter.View
 
     ListItemClickListener itemClickListener;
 
+    public void addResturant(String newResturant, String newUrl){
+        Resturant.boulderFood.add(new Resturant(newResturant, newUrl));
+        notifyItemInserted(getItemCount());
+    }
+
 }
