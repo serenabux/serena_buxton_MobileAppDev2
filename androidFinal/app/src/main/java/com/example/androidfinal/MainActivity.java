@@ -11,20 +11,31 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 public class MainActivity extends AppCompatActivity implements ResturantAdapter.ListItemClickListener {
+
+    private RequestQueue queue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //load data
-        if(Resturant.boulderFood.isEmpty()) {
-            Resturant.loadData(this);
-        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -44,6 +55,14 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
 
         //set a layout manager on the recycler view
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //load data
+        if(Resturant.boulderFood.isEmpty()) {
+            Resturant.loadData(this);
+        }
+
+        //load JSON data
+        requestData(adapter);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +139,51 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
         super.onPause();
 //save data
         Resturant.storeData(this);
+    }
+
+    private void requestData(final ResturantAdapter adapter){
+
+        queue = Volley.newRequestQueue(this);
+        //create URL for request
+        String json_url = "https://creative.colorado.edu/~apierce/samples/data/yelp_restaurants.json";
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, json_url,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        parseJSON(response, adapter);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("ERROR", error.getMessage(), error);
+            }
+        });
+
+        // Add the request to the RequestQueue
+        queue.add(stringRequest);
+    }
+
+    private void parseJSON(String response, ResturantAdapter adapter){
+        //response should be a String with JSON objects
+        if (response == null) {
+            response = "THERE WAS AN ERROR";
+        }
+
+        //parse JSON object
+        try {
+            JSONObject object = (JSONObject) new JSONTokener(response).nextValue();
+            JSONArray resturantData = object.getJSONArray("restaurants");
+            for (int i = 0; i < resturantData.length(); i++) {
+                JSONObject food = resturantData.getJSONObject(i);
+                String foodName = food.getString("name");
+                String foodUrl = food.getString("url");
+                adapter.addResturant(foodName,foodUrl);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 

@@ -3,6 +3,7 @@ package com.example.androidfinal;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -10,9 +11,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 import java.util.List;
 
 public class ResturantAdapter extends RecyclerView.Adapter<ResturantAdapter.ViewHolder>{
+    private RequestQueue queue;
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView restuarntTextView;
 
@@ -106,5 +120,7 @@ public class ResturantAdapter extends RecyclerView.Adapter<ResturantAdapter.View
         Resturant.boulderFood.remove(position);
         notifyItemRemoved(position);
     }
+
+
 
 }
