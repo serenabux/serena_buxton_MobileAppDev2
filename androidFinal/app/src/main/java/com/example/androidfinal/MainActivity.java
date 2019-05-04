@@ -1,6 +1,7 @@
 package com.example.androidfinal;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -105,8 +106,12 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
 
     @Override
     public void onListItemClick(int position) {
-
+        Intent intent = new Intent(MainActivity.this, ResturantWeb.class);
+        intent.putExtra("rest_id", position);
+        startActivity(intent);
     }
+
+
 
 
 }
