@@ -1,8 +1,11 @@
 package com.example.androidfinal;
 
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -44,9 +47,40 @@ public class ResturantAdapter extends RecyclerView.Adapter<ResturantAdapter.View
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ResturantAdapter.ViewHolder viewHolder, int i) {
-        Resturant resturant = resturants.get(i);
+    public void onBindViewHolder(@NonNull final ResturantAdapter.ViewHolder viewHolder, int i) {
+        final Resturant resturant = resturants.get(i);
         viewHolder.restuarntTextView.setText(resturant.getName());
+
+        //long click listener
+        viewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener(){
+
+            @Override
+            public boolean onLongClick(View v) {
+                return false;
+            }
+        });
+
+        //context menu
+        viewHolder.itemView.setOnCreateContextMenuListener(new View.OnCreateContextMenuListener(){
+            @Override
+            public void onCreateContextMenu(ContextMenu menu, final View v, ContextMenu.ContextMenuInfo menuInfo) {
+                //set the menu title
+                menu.setHeaderTitle("Delete " + resturant.getName());
+                //add the choices to the menu
+                menu.add(1, 1, 1, "Yes").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        deleteResturant(viewHolder.getAdapterPosition());
+                        Snackbar.make(v, "Item removed", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                        return false;
+                    }
+                });
+                menu.add(2, 2, 2, "No");
+            }
+        });
+
+
     }
 
     @Override
@@ -60,9 +94,17 @@ public class ResturantAdapter extends RecyclerView.Adapter<ResturantAdapter.View
 
     ListItemClickListener itemClickListener;
 
+
+
     public void addResturant(String newResturant, String newUrl){
         Resturant.boulderFood.add(new Resturant(newResturant, newUrl));
         notifyItemInserted(getItemCount());
+    }
+
+
+    public void deleteResturant(int position){
+        Resturant.boulderFood.remove(position);
+        notifyItemRemoved(position);
     }
 
 }
