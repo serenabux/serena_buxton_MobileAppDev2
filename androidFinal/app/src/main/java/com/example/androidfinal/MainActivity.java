@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //load data
+        if(Resturant.boulderFood.isEmpty()) {
+            Resturant.loadData(this);
+        }
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -109,6 +113,13 @@ public class MainActivity extends AppCompatActivity implements ResturantAdapter.
         Intent intent = new Intent(MainActivity.this, ResturantWeb.class);
         intent.putExtra("rest_id", position);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+//save data
+        Resturant.storeData(this);
     }
 
 
